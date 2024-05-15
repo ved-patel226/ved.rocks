@@ -212,3 +212,8 @@ img{
     margin-right: auto;
 
   }
+
+.s{
+    box-shadow: 0 0 0 100vmax #121212;
+    clip-path: insect(-100vmax 0);
+}
