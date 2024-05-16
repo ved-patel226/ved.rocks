@@ -59,3 +59,25 @@ body {
 .navbar .right:hover {
     filter: drop-shadow(0 0 10px white); /* Adds a glow effect */
 }
+
+
+.wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .glow,
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+ }
+
+.glow {
+  filter: blur(30px) saturate(5);
+}
