@@ -1,6 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --spring-easing: linear(
+      0, 0.009, 0.035 2.1%, 0.141, 0.281 6.7%, 0.723 12.9%, 0.938 16.7%, 1.017,
+      1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%,
+      1.051 39.6%, 1.017 43.1%, 0.991, 0.977 51%, 0.974 53.8%, 0.975 57.1%,
+      0.997 69.8%, 1.003 76.9%, 1.004 83.8%, 1
+    );
+    --spring-duration: 1.333s;
+  }
 
 html {
     background-color: #28282B;
@@ -12,7 +21,16 @@ body {
     padding-top: 25vh; /* Adjust this value to match the height of your navbar */
 }
 
-p, h1, h2, h3, h4, h5, h6, a{
+h1, h2, h3, h4, h5, h6{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    filter: drop-shadow(0 0 0.5rem white) /* Enhanced glow effect */
+
+}
+
+.navbar a{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -55,7 +73,7 @@ p, h1, h2, h3, h4, h5, h6, a{
 }
 
 .scale{
-    transition: all 0.5s ease;
+    transition: all 0.5s var(--spring-easing);
     filter: drop-shadow(0 0 10px white); /* Adds a glow effect */
 }
 
@@ -119,6 +137,8 @@ p, h1, h2, h3, h4, h5, h6, a{
 }
 
 
+
+
 .hugee{
     background: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
@@ -128,7 +148,67 @@ p, h1, h2, h3, h4, h5, h6, a{
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     margin-left: auto;
     margin-right: auto;
+    transition: all 0.5s var(--spring-easing);
 }
+
+.hugee2{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 10px 20px;
+    max-width: fit-content;
+    max-height: fit-content;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(50px);
+    transition: all 0.5s var(--spring-easing);
+}
+
+.hugee:hover{
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+    cursor: pointer;
+}
+
+.hugee2:hover{
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg) translateY(50px);
+    cursor: pointer;
+}
+
+
+.parent {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  .child {
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  }
+
+
+.footer{
+    background-color: #222224;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.footer p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin-left: 10rem;
+}
+
 
 @media only screen and (max-width:810px){
 
@@ -172,24 +252,12 @@ p, h1, h2, h3, h4, h5, h6, a{
         cursor: none;
     }
     
-}
-
-@media only screen and (max-width:480px){
-
-    .navbar {
-        max-width: none;
-    }
-
-    .navbar .left{
-        margin-right: 0rem
-    }
-
-    .intro{
-        margin-left: 0;
+    .footer p{
         text-align: center;
+        margin: 0;
     }
 
-    .text_ani{
+    .hugee{
         -webkit-animation: none !important;
         animation: none !important;
         -webkit-transform: none !important;
@@ -197,23 +265,14 @@ p, h1, h2, h3, h4, h5, h6, a{
         transition-property: none !important;
         opacity: 1 !important;
     }
-
-    .navbar a:hover {
-        background-color: none; /* Slightly brighter hover effect */
+    .hugee2{
+        -webkit-animation: none !important;
+        animation: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        transition-property: none !important;
+        opacity: 1 !important;
     }
-    
-    .navbar .right:hover {
-        background: none;
-    }
-
-    .scale{
-        transition: none;
-        filter: none; /* Adds a glow effect */
-    }
-    
-    .scale:hover {
-        transform: none;
-        cursor: none;
-    }
-    
 }
+
+
