@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 html {
     background-color: #28282B;
 }
@@ -8,26 +12,38 @@ body {
     padding-top: 25vh; /* Adjust this value to match the height of your navbar */
 }
 
+p, h1, h2, h3, h4, h5, h6, a{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    filter: drop-shadow(0 0 0.5rem white) /* Enhanced glow effect */
+
+}
+
+
+
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1rem);
     border-radius: 15px;
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    margin: 0 auto; /* Center the navbar horizontally */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin: auto; /* Center the navbar horizontally */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     max-width: fit-content;
-    margin-top: 2.5vh;
+    margin-top: 2rem;
 }
 
 .navbar .left {
     flex-grow: 1;
-    margin-right: 50vh; /* Margin between the left and right items */
+    margin-right: 35rem; /* Margin between the left and right items */
 }
 
 .navbar a {
@@ -35,7 +51,7 @@ body {
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px white) /* Enhanced glow effect */
+    filter: drop-shadow(0 0 1rem white) /* Enhanced glow effect */
 }
 
 .scale{
@@ -57,14 +73,13 @@ body {
 }
 
 .navbar .right:hover {
-    filter: drop-shadow(0 0 10px white); /* Adds a glow effect */
+    filter: drop-shadow(0 0 1rem white); /* Adds a glow effect */
 }
-
 
 .wrapper {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 10rem;
+    height: 10rem;
     margin-right: auto;
     margin-left: auto;
   }
@@ -75,9 +90,130 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.5rem;
  }
 
 .glow {
-  filter: blur(30px) saturate(5);
+  filter: blur(0.35rem) saturate(5);
+}
+
+.intro{
+    margin-left: 10vw;
+}
+
+@keyframes slideInLeft{
+    from {
+        transform: translateY(3rem);
+        opacity: 0.1;
+
+    }
+
+    to {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+.text_ani{
+    animation: slideInLeft 1s ease;
+}
+
+
+.hugee{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 10px 20px;
+    max-width: fit-content;
+    max-height: fit-content;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width:810px){
+
+    .navbar {
+        max-width: none;
+    }
+
+    .navbar .left{
+        margin-right: 0rem
+    }
+
+    .intro{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .text_ani{
+        -webkit-animation: none !important;
+        animation: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        transition-property: none !important;
+        opacity: 1 !important;
+    }
+
+    .navbar a:hover {
+        background-color: none; /* Slightly brighter hover effect */
+    }
+    
+    .navbar .right:hover {
+        background: none;
+    }
+
+    .scale{
+        transition: none;
+        filter: none; /* Adds a glow effect */
+    }
+    
+    .scale:hover {
+        transform: none;
+        cursor: none;
+    }
+    
+}
+
+@media only screen and (max-width:480px){
+
+    .navbar {
+        max-width: none;
+    }
+
+    .navbar .left{
+        margin-right: 0rem
+    }
+
+    .intro{
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .text_ani{
+        -webkit-animation: none !important;
+        animation: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        transition-property: none !important;
+        opacity: 1 !important;
+    }
+
+    .navbar a:hover {
+        background-color: none; /* Slightly brighter hover effect */
+    }
+    
+    .navbar .right:hover {
+        background: none;
+    }
+
+    .scale{
+        transition: none;
+        filter: none; /* Adds a glow effect */
+    }
+    
+    .scale:hover {
+        transform: none;
+        cursor: none;
+    }
+    
 }
