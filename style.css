@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6{
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     max-width: fit-content;
     margin-top: 2rem;
+    transform: translate3d(0, 0, 0);
 }
 
 .navbar .left {
@@ -273,6 +274,12 @@ h1, h2, h3, h4, h5, h6{
         transition-property: none !important;
         opacity: 1 !important;
     }
+
+    .parent{
+        margin: 0;
+        padding: 0;
+    }
+
 }
 
 
