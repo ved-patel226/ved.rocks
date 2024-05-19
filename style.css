@@ -48,7 +48,8 @@ h1, h2, h3, h4, h5, h6{
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem); /* Add this line first, it fixes blur for Safari*/
+    backdrop-filter: blur(1rem);  /* This line activates blur*/
     border-radius: 15px;
     padding: 10px 20px;
     display: flex;
@@ -58,6 +59,7 @@ h1, h2, h3, h4, h5, h6{
     max-width: fit-content;
     margin-top: 2rem;
     transform: translate3d(0, 0, 0);
+    
 }
 
 .navbar .left {
