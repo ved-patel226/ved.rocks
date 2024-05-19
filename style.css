@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6{
     align-items: center;
     margin: auto; /* Center the navbar horizontally */
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-    max-width: fit-content;
+    max-width: 100ch;
     margin-top: 2rem;
     transform: translate3d(0, 0, 0);
     
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6{
 
 .navbar .left {
     flex-grow: 1;
-    margin-right: 35rem; /* Margin between the left and right items */
+    float: left; /* Margin between the left and right items */
 }
 
 .navbar a {
@@ -83,6 +83,10 @@ h1, h2, h3, h4, h5, h6{
 .scale:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.scale:active{
+    transform: scale(0.9);
 }
 
 .navbar .left:hover {
@@ -125,18 +129,18 @@ h1, h2, h3, h4, h5, h6{
 @keyframes slideInLeft{
     from {
         transform: translateY(3rem);
-        opacity: 0.1;
+        opacity: 0.01;
 
     }
 
     to {
-        transform: translateX(0rem);
+        transform: translateY(0rem);
         opacity: 1;
     }
 }
 
 .text_ani{
-    animation: slideInLeft 1s ease;
+    animation: slideInLeft 2s ease;
 }
 
 
@@ -185,6 +189,25 @@ h1, h2, h3, h4, h5, h6{
     cursor: pointer;
 }
 
+.hugee:active{
+    -moz-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+    cursor: pointer;
+}
+
+
+.hugee2:active{
+    -moz-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    transform: rotate(-15deg) translateY(50px);
+    cursor: pointer;
+}
+
 
 .parent {
     margin: 1rem;
@@ -209,11 +232,20 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 400;
     font-style: normal;
     color: white;
+}
+
+.footerthing{
     margin-left: 10rem;
 }
 
 
 @media only screen and (max-width:810px){
+
+
+    .body{
+        padding-top: 0;
+    }
+
 
     .navbar {
         max-width: none;
@@ -226,15 +258,6 @@ h1, h2, h3, h4, h5, h6{
     .intro{
         margin-left: 0;
         text-align: center;
-    }
-
-    .text_ani{
-        -webkit-animation: none !important;
-        animation: none !important;
-        -webkit-transform: none !important;
-        transform: none !important;
-        transition-property: none !important;
-        opacity: 1 !important;
     }
 
     .navbar a:hover {
@@ -277,10 +300,14 @@ h1, h2, h3, h4, h5, h6{
         opacity: 1 !important;
     }
 
+
+
     .parent{
         margin: 0;
         padding: 0;
     }
+
+
 
 }
 
