@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6{
     }
 
     .navbar a:hover {
-        background-color: none; /* Slightly brighter hover effect */
+        background-color: none; 
     }
     
     .navbar .right:hover {
@@ -270,7 +270,7 @@ h1, h2, h3, h4, h5, h6{
 
     .scale{
         transition: none;
-        filter: none; /* Adds a glow effect */
+        filter: none; 
     }
     
     .scale:hover {
