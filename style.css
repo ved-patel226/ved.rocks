@@ -35,8 +35,7 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 600;
     font-style: normal;
     color: white;
-    filter: drop-shadow(0 0 0.5rem white) /* Enhanced glow effect */
-
+    filter: drop-shadow(0 0 0.5rem white); /* Enhanced glow effect */
 }
 
 
@@ -238,21 +237,51 @@ h1, h2, h3, h4, h5, h6{
     margin-left: 10rem;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
 
-@media only screen and (max-width:810px){
 
-
-    .body{
-        padding-top: 0;
+@media only screen and (max-width: 1075px){
+    .hugee2{
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 10px 20px;
+        max-width: fit-content;
+        max-height: fit-content;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateY(0);
+        transition: all 0.5s var(--spring-easing);
     }
-
 
     .navbar {
         max-width: none;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
+}
+
+@media only screen and (max-width:810px){
+
+    .ultra{
+        float: left;
+    }
+
+    body{
+        padding-top: 17.5vh;
+    }
+
+
+
     .navbar .left{
-        margin-right: 0rem
+        margin-right: 0;
     }
 
     .intro{
@@ -307,6 +336,12 @@ h1, h2, h3, h4, h5, h6{
         padding: 0;
     }
 
+
+    .centertexty{
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 
 }
