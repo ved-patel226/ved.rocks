@@ -412,7 +412,7 @@ h1, h2, h3, h4, h5, h6{
     }
 
     .footerthing3{
-        transform: translateY(-7px);
+        display:none;
     }
 
     .footer{
@@ -421,5 +421,3 @@ h1, h2, h3, h4, h5, h6{
 
 
 }
-
-
