@@ -70,21 +70,49 @@
     </div>
 
     <div class="footer">
-        <p class="footerthing">
-            Ved Patel
-        </p>
+        <a class="detect">
+            <a>
+                <p class="footerthing" style="float: left;">
+                    Ved Patel
+                </p>
+            </a>
+
+
+            <a>
+                <p class='footerthing2' style="float:left; margin-left: 1rem">
+                    Contact Me
+                </p>
+            </a>
+
+
+            <img class='footerthing3' src="./assets/thums.png">
+        </a>
+
     </div>
 
     <script>
 window.addEventListener('scroll', () => {
     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = window.scrollY;
+    const footerText = document.querySelector('.footerthing');
+    const footerText2 = document.querySelector('.footerthing2');
+    const footerText3 = document.querySelector('.footerthing3');
 
-    if (Math.ceil(scrolled) >= scrollableHeight) {
-        console.log('You have reached the bottom of the page!');
-        // Add any additional actions you want to perform here
+
+    if (footerText) {
+        if (Math.ceil(scrolled) >= scrollableHeight) {
+            footerText.classList.add('fade-out');
+            footerText2.classList.remove('fade-out');
+            footerText3.classList.remove('fade-out');
+        } else {
+            footerText.classList.remove('fade-out');
+            footerText2.classList.add('fade-out');
+            footerText3.classList.add('fade-out');
+
+        }
     }
 });
+
     </script>
 </body>
 </html>

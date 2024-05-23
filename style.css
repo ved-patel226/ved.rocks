@@ -224,6 +224,7 @@ h1, h2, h3, h4, h5, h6{
     background-color: #222224;
     padding: 1rem;
     margin-top: 3rem;
+    height: 3rem;
 }
 
 .footer p{
@@ -236,6 +237,62 @@ h1, h2, h3, h4, h5, h6{
 .footerthing{
     margin-left: 10rem;
 }
+.footerthing {
+    transition: 5s var(--spring-easing);
+}
+
+@keyframes slide{
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-10rem);
+    }
+}
+
+
+@keyframes slidei{
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(10rem);
+    }
+}
+
+
+.footerthing.fade-out {
+    animation: slide 5s var(--spring-easing);
+    opacity: 0;
+}
+
+
+.footerthing2{
+    margin-left: 10rem;
+}
+.footerthing2 {
+    transition: 5s var(--spring-easing);
+}
+
+.footerthing2.fade-out {
+    animation: slidei 5s var(--spring-easing);
+    opacity: 0;
+}
+
+.footerthing3 {
+    transition: 5s var(--spring-easing);
+    height: 2rem; 
+    margin-left: 1rem; 
+    transform: translateY(10px);
+}
+
+.footerthing3.fade-out {
+    animation: slidei 5s var(--spring-easing);
+    opacity: 0;
+}
+
 
 .container {
     display: flex;
@@ -244,6 +301,17 @@ h1, h2, h3, h4, h5, h6{
     align-items: center;
     gap: 4px;
   }
+
+
+@keyframes footerfade{
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0s;
+    }
+}
 
 
 @media only screen and (max-width: 1075px){
@@ -341,6 +409,14 @@ h1, h2, h3, h4, h5, h6{
         max-width: fit-content;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .footerthing3{
+        transform: translateY(-7px);
+    }
+
+    .footer{
+        height: 0.75rem;
     }
 
 
