@@ -94,17 +94,20 @@
 window.addEventListener('scroll', () => {
     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = window.scrollY;
+    const footerText = document.querySelector('.footerthing');
     const footerText2 = document.querySelector('.footerthing2');
     const footerText3 = document.querySelector('.footerthing3');
 
 
     if (footerText) {
         if (Math.ceil(scrolled) >= scrollableHeight) {
+            footerText.classList.remove('fade-out');
             footerText2.classList.remove('fade-out');
             footerText3.classList.remove('fade-out');
         } else {
             footerText2.classList.add('fade-out');
             footerText3.classList.add('fade-out');
+            footerText.classList.remove('fade-out');
 
         }
     }
