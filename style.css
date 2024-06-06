@@ -245,11 +245,11 @@ h6 {
 }
 
 .difleft2 {
-  animation: slideKeft 2.1s var(--spring-easing);
+  animation: slideKeft 2s var(--spring-easing);
 }
 
 .difright2 {
-  animation: slideKight 2.7s var(--spring-easing);
+  animation: slideKight 3s var(--spring-easing);
 }
 
 .footer {
