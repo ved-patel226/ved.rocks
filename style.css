@@ -13,6 +13,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   padding-top: 25vh; /* Adjust this value to match the height of your navbar */
+  --sb-track-color: #2a2a2d;
+  --sb-thumb-color: #161617;
+  --sb-size: 15px;
 }
 
 h1,
@@ -390,6 +393,21 @@ h6 {
     height: 0.75rem;
   }
 }
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 5px;
+}
+
 
 @media only screen and (max-width: 414px) {
   .p2 {
