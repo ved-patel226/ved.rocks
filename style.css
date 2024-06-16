@@ -129,22 +129,6 @@ h6 {
   margin-left: 10vw;
 }
 
-@keyframes slideInLeft {
-  from {
-    transform: translateY(3rem);
-    opacity: 0.01;
-  }
-
-  to {
-    transform: translateY(0rem);
-    opacity: 1;
-  }
-}
-
-.text_ani {
-  animation: slideInLeft 2s ease;
-}
-
 .hugee {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 15px;
@@ -212,41 +196,12 @@ h6 {
   text-align: center;
 }
 
-@keyframes slideKeft {
-  0% {
-    transform: translateX(-5rem);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0rem);
-    opacity: 1;
-  }
-}
-
-@keyframes slideKight {
-  0% {
-    transform: translateX(5rem);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0rem);
-    opacity: 1;
-  }
-}
-
-
-
 .child {
   display: inline-block;
   padding: 1rem 1rem;
   vertical-align: middle;
   animation: slideKeft 2s var(--spring-easing);
 }
-
-
-
 
 .footer {
   background-color: #222224;
@@ -408,6 +363,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
+.parent {
+  margin-top: 5rem;
+}
 
 @media only screen and (max-width: 414px) {
   .p2 {
