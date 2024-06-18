@@ -39,6 +39,31 @@ h6 {
   filter: drop-shadow(0 0 0.5rem white); /* Enhanced glow effect */
 }
 
+@keyframes nav-back {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav-to {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.moving {
+  animation: 0.5s nav-to var(--spring-easing);
+}
+.stopedmoving {
+  animation: 1s nav-back var(--spring-easing);
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -58,6 +83,7 @@ h6 {
   max-width: 100ch;
   margin-top: 2rem;
   transform: translate3d(0, 0, 0);
+  transition: transform 1s var(--spring-easing);
 }
 
 .navbar .left {

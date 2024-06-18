@@ -9,7 +9,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="navbar" style="z-index: 999">
+    <div class="navbar" data-lag="0.5" style="z-index: 999">
       <a class="left" style="font-size: 4vh">Ved Patel</a>
       <a class="right scale" href="https://github.com/ved-patel226">
         <svg
@@ -183,7 +183,7 @@
         <div class="hugee">
           <div class="wrapper">
             <img class="glow" src="./assets/1.png" />
-            <a href="https://github.com/ved-patel226/handdrawnai">
+            <a href="https://devpost.com/software/quickassist">
               <img class="image" src="./assets/1.png" />
             </a>
           </div>
@@ -199,7 +199,10 @@
         <div class="hugee2">
           <div class="wrapper">
             <img class="glow" src="./assets/2.png" />
-            <img class="image" src="./assets/2.png" />
+
+            <a href="https://large-type.com/#contact%20me%20for%20certificate">
+              <img class="image" src="./assets/2.png" />
+            </a>
           </div>
         </div>
       </div>
@@ -218,6 +221,33 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+      var timer = null;
+      window.addEventListener(
+        "scroll",
+        function () {
+          if (timer !== null) {
+            clearTimeout(timer);
+          }
+          timer = setTimeout(function () {
+            console.log("scrolling has stopped.");
+            //var navbar = document.querySelector(".navbar");
+            //navbar.classList.remove("moving");
+            //navbar.classList.add("stopedmoving");
+          }, 150);
+          //var navbar = document.querySelector(".navbar");
+          console.log("scrolling");
+          //navbar.classList.remove("stopedmoving");
+          //navbar.classList.add("moving");
+        },
+        false
+      );
     </script>
   </body>
 </html>
