@@ -29,6 +29,7 @@ h6 {
   font-style: normal;
   color: white;
   filter: drop-shadow(0 0 0.5rem white); /* Enhanced glow effect */
+  cursor: default;
 }
 
 .navbar a {
@@ -136,6 +137,7 @@ h6 {
   height: 10rem;
   margin-right: auto;
   margin-left: auto;
+  transition: all 0.5s var(--spring-easing);
 }
 
 .glow,
@@ -396,5 +398,9 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 414px) {
   .p2 {
     margin-top: 5rem;
+  }
+
+  .footer {
+    height: 1.5rem;
   }
 }
