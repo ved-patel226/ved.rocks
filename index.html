@@ -191,7 +191,7 @@
       </div>
 
       <div
-        class="child"
+        class="child no-click"
         data-aos="fade-left"
         data-aos-duration="2300"
         style="animation: slideKight 1.3s var(--spring-easing)"
@@ -200,11 +200,13 @@
           <div class="wrapper" id="god">
             <img class="glow" src="./assets/2.png" />
 
-            <a href="https://large-type.com/#contact%20me%20for%20certificate">
-              <img class="image" src="./assets/2.png" />
-            </a>
+            <img class="image" src="./assets/2.png" />
           </div>
         </div>
+      </div>
+
+      <div class="no-click-text">
+        <h1 style="margin-top: 10px; margin-bottom: 10px">Contact for Proof</h1>
       </div>
     </div>
 
@@ -246,6 +248,20 @@
         },
         false
       );
+    </script>
+
+    <script>
+      document
+        .querySelector(".no-click")
+        .addEventListener("click", function () {
+          document.querySelector(".no-click-text").style.display = "block";
+          document.querySelector(".no-click-text").classList.add("shift-text");
+          setTimeout(function () {
+            document
+              .querySelector(".no-click-text")
+              .classList.remove("shift-text");
+          }, 3000);
+        });
     </script>
   </body>
 </html>
