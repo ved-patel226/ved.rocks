@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ved Patel</title>
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="/assets/dizzy.png">
+  <link rel="stylesheet" href="styles/styles.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 <body>
   <div class="nav">
@@ -26,9 +28,59 @@
   </div>
 
   <div class="hero">
-    <div class="name"><h1>Hi, my <br> name is Ved.</h1></div>
-    <div class="description"><p>I'm a full-stack developer based in NJ. I build things that live on the internet.</p></div>
+    <div class="text">
+      <div class="name"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="0"><h1>Hi, my <br> name is Ved.</h1></div>
+      
+      <div class="description"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="200"><h2>I'm a full-stack developer based in NJ.</h2></div>
+      
+      <div class="cool-stuff"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="400"><h2>I build cool stuff. Like that emoji! Give it a hover!</h2></div>
+    
+    </div>
+    <img src="/assets/dizzy.png" alt="Dizzy Emoji">
   </div>
+
+  <hr>
+
+  <div class="hard-at-work">
+    <h1>I've been hard at work!</h1>
+    <h2>Here are some of my projects:</h2>    
+  </div>
+
+  <div class="cards">
+    <div class="column">
+      <div class="card">
+        <img src="/assets/pcap.png" alt="Emoji Game">
+      </div>
+
+      <div class="card">
+        <img src="/assets/pcap.png" alt="Emoji Game">
+      </div> 
+
+      
+    </div>
+    <div class="column">
+      <div class="card">
+        <img src="/assets/pcep.png" alt="Emoji Game">
+      </div>
+    </div>
+  </div>
+
+
+  
+  <script src="js/dizzy.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
