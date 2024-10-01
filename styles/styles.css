@@ -14,11 +14,21 @@
     --primary-rgb: 24, 28, 20;
 }
 
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 html {
     background-color: var(--forciery);
     overflow-x: none;
 }
 
+body {
+    margin-bottom: 200px;
+}
 
 h1, h2 {
     font-family: "Poppins", sans-serif;
@@ -94,9 +104,9 @@ h1, h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 50vh;
     width: 100%;
-    padding: 200px 0;
+    padding: 125px 0;
     text-align: center;
     gap: 15%;
 }
@@ -117,16 +127,16 @@ h1, h2 {
         transform: rotate(0deg);
     }
     25% {
-        transform: rotate(5deg);
+        transform: rotate(10deg);
     }
     50% {
-        transform: rotate(-5deg);
+        transform: rotate(-10deg);
     }
     75% {
-        transform: rotate(5deg);
+        transform: rotate(10deg);
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate();
     }
 }
 
@@ -142,7 +152,6 @@ h1, h2 {
 .img-shake {
     animation: img-shake 1s infinite;
 }
-
 
 .hero .name {
     position: relative;
@@ -216,6 +225,18 @@ hr.hidden {
     border: none;
 }
 
+hr:not(:first-child) {
+    margin: 0 auto;
+    margin-top: 225px;
+    margin-bottom: 50px;
+}
+
+.hr {
+    margin: 0 auto;
+    margin-top: 225px;
+    margin-bottom: 50px;
+}
+
 .hard-at-work {
     font-size: 20px;
     text-align: left;
@@ -223,7 +244,15 @@ hr.hidden {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
+
+
+.hard-at-work span {
+    font-weight: 900;
+    color: var(--thircirary);
+}
+
 
 .cards {
     display: flex;
@@ -237,7 +266,7 @@ hr.hidden {
 .cards .column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 110px;
 }
@@ -247,6 +276,10 @@ hr.hidden {
 }
 
 .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     margin-top: 20px;
     padding: 20px;
     border-radius: 20px;
@@ -254,6 +287,7 @@ hr.hidden {
     box-shadow: 0 0 1rem rgba(var(--secondary-rgb), 0.5);
     transition: all var(--spring-duration) var(--spring-easing);
 }
+
 
 .card:hover {
     cursor: pointer;
@@ -265,14 +299,148 @@ hr.hidden {
     box-shadow: 0 0 2rem rgba(var(--secondary-rgb), 0.5);
 }
 
+.column:nth-child(odd) .card:active {
+    transform: rotate(10deg);
+    scale: 1;
+    box-shadow: 0 0 1rem rgba(var(--secondary-rgb), 0.5);
+}
+
 .column:nth-child(even) .card:hover {
     transform: rotate(-5deg);
     scale: 1.02;
     box-shadow: 0 0 2rem rgba(var(--secondary-rgb), 0.5);
 }
 
+.column:nth-child(even) .card:active {
+    transform: rotate(-10deg);
+    scale: 1;
+    box-shadow: 0 0 1rem rgba(var(--secondary-rgb), 0.5);
+}
 
 .card img {
     width: 200px;
     height: 200px;
+    border-radius: 20px;
+    -webkit-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+}
+
+
+.card h1 {
+    color: black;
+    position: absolute;
+    top: 0;
+    font-size: 24px;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(var(--forcierty-rgb), 0.9);
+    border-radius: 20px;
+    width: 220px;
+    height: 220px;
+    padding: 0;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.card h1:hover {
+    cursor: pointer;
+}
+
+
+.card svg {
+    width: 200px;
+    height: 200px;
+    fill: var(--thircirary);
+    transition: all var(--spring-duration) var(--spring-easing);
+}
+
+a {
+    -webkit-user-drag: none;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 150px;
+    margin-top: 150px;
+}
+
+.skills {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+  
+.skills h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+  
+.skill {
+    margin-bottom: 20px;
+}
+  
+.skill-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.skill-name svg {
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    background-color: var(--forciery);
+    border: 3px solid var(--thircirary);
+    margin-bottom: 20px;
+    border-radius: 25px;
+    filter: grayscale(1);
+}
+  
+.skill-bar {
+    border: 3px solid black;
+    border-radius: 25px;
+    position: relative;
+    height: 20px;
+    width: 100%;
+}
+
+.skill-level {
+    background-color: var(--thircirary);
+    height: 100%;
+    border-radius: 25px;
+    width: 0;
+    transition: width 2s ease;
+}
+
+.vertical {
+    background-color: var(--thircirary);
+    width: 1px;
+    border: 3px solid var(--thircirary);
+    height: 100%;
+}
+
+h1.ttl {
+    font-size: 30px;
+}
+
+#scroll-anim {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 25vh;
+}
+
+.skill-vert {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
