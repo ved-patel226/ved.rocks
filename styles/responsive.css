@@ -22,13 +22,6 @@
         font-size: 15px;
     }
 
-    .hero .cool-stuff::before {
-        top: 35px;
-        left: 5px;
-        width: 75px;
-        height: 40px;
-    }
-
     .card h1 {
         width: 150px;
         height: 150px;
@@ -75,11 +68,6 @@
     br {
         display: none;
     }
-
-    .hero .name::before {
-        top: 0;
-        left: 450px;
-    }
 }
 
 @media (max-width: 1332px) {
@@ -88,68 +76,15 @@
     }
 }
 
-@media (max-width: 1124px) {
-    .hero .description::before {
-        top: 125px;
-        left: 0;
-        width: 70px;
-        height: 50px;
-    }
-}
-@media (max-width: 1042px) {
-    .hero .description::before {
-        top: 125px;
-        left: 40px;
-        width: 70px;
-        height: 50px;
-    }
 
+@media (max-width: 1042px) {
     .skills-container {
         margin: 0;
     }
 }
 
-@media (max-width: 967px) {
-    .hero .name::before {
-        top: 100px;
-        left: 0;
-    }
-}
 
-@media (max-width: 630px) {
-    .hero .name::before {
-        top: 100px !important;
-        left: -10px !important;
-    }
-}
-
-@media (max-width: 992px) {
-    .hero .description::before {
-        top: 125px;
-        left: 150px;
-        width: 70px;
-        height: 50px;
-    }
-}
-@media (max-width: 840px) {
-    .hero .description::before {
-        top: 125px;
-        left: 370px;
-        width: 70px;
-        height: 50px;
-    }
-}
 @media (max-width: 800px) {
-
-    .hero .name::before {
-        top: 0;
-        left: 450px;
-    }
-
-    .hero .description::before {
-        top: 25px;
-    }
-
     #scroll-anim {
         display: none;
     }
@@ -161,7 +96,6 @@
 }
 
 @media (max-width: 500px) {
-
     .hero {
         gap: 0;
     }
@@ -176,28 +110,13 @@
 
 
 @media (max-width: 414px) {
-    .hero .description::before {
-        top: 75px;
-        left: 35px;
-        width: 50px;
-        height: 50px;
-    }
-
-    .hero .name::before {
-        top: 280px;
-        left: 0;
-        width: 120px;
-    }
-
-    hr:first-child {
-       margin: 0;
-    }
-
     .hero {
-        margin-top: 150px;
+        margin-top: 200px;
     }
 
     .emoji img {
         display: none;
     }
+
+    
 }
