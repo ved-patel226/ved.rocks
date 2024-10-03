@@ -29,6 +29,7 @@ html {
 
 body {
     overflow-x: hidden;
+    padding-top: 100px;
 }
 
 
@@ -71,7 +72,6 @@ h1, h2 {
     color: var(--thircirary);
     scale: 1.02;
 }
-
 .menu {
     display: flex;
     flex-direction: row;
@@ -81,10 +81,16 @@ h1, h2 {
 }
 
 .menu svg {
+    fill: black;
+    width: 72px;
+    height: 72px;
     padding: 20px;
-    border-radius: 20px;
-    filter: drop-shadow(0 0 1rem white);
+    border-radius: 25px;
     transition: all var(--spring-duration) var(--spring-easing);
+}
+
+.menu svg path {
+    fill: black;
 }
 
 .menu a {
@@ -92,14 +98,15 @@ h1, h2 {
 }
 
 .menu svg:hover {
-    background-color: rgba(var(--thircirary-rgb),0.5);
+    background-color: rgba(var(--thircirary-rgb), 0.5);
     scale: 1.03;
 }
 
 .menu svg:active {
-    background-color: rgba(var(--thircirary-rgb),0.2);
+    background-color: rgba(var(--thircirary-rgb), 0.2);
     scale: 0.95;
 }
+
 
 .hero {
     display: flex;
@@ -356,8 +363,6 @@ a {
 }
 
 .skill-name svg {
-    width: 50px;
-    height: 50px;
     padding: 20px;
     background-color: var(--forciery);
     border: 3px solid var(--thircirary);
@@ -439,7 +444,7 @@ footer {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 20px;
-    margin: 300px;
+    margin: 200px;
     margin-bottom: 100px;
     background-color: var(--primary);
     border: 5px solid var(--primary);

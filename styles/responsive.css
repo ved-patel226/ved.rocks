@@ -118,5 +118,8 @@
         display: none;
     }
 
+    .skills-container {
+        margin-top: 200px;
+    }
     
 }
