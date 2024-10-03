@@ -113,7 +113,7 @@ h1, h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 75vh;
     width: 100%;
     padding: 125px 0;
     text-align: center;
@@ -217,7 +217,6 @@ hr:not(:first-child) {
     align-items: center;
     margin-top: 100px;
 }
-
 
 .hard-at-work span {
     font-weight: 900;
@@ -446,6 +445,7 @@ footer {
     font-size: 20px;
     margin: 200px;
     margin-bottom: 100px;
+    margin-top: 300px;
     background-color: var(--primary);
     border: 5px solid var(--primary);
     border-radius: 25px;
@@ -456,17 +456,18 @@ footer {
     flex-direction: column;
 }
 
-footer .main-text h1 {
-    font-size: 75px;
-    margin-top: 50px;
-}
-
 .main-text {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 50px;
 }
+
+.main-text h1 {
+    font-size: 75px;
+    margin-top: 50px;
+}
+
 
 .main-text a {
     margin-left: auto;
