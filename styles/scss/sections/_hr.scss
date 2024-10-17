@@ -1,0 +1,21 @@
+hr {
+    width: 75%;
+    border: 3px solid var(--thircirary);
+
+    &.hidden {
+        border: none;
+    }
+
+    &:not(:first-child) {
+        margin: 0 auto;
+        margin-top: 225px;
+        margin-bottom: 50px;
+    }
+    
+}
+
+.hr {
+    margin: 0 auto;
+    margin-top: 225px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,78 @@
+@import '../_var';
+@import '../animation';
+
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 100%;
+    padding: 125px 0;
+    text-align: center;
+    gap: 15%;
+
+    img {
+        width: 200px;
+        height: 200px;
+        transition: all $spring-duration $spring-easing;
+        animation: img-shake 1s infinite;
+    
+        &.spinning {
+            animation: spin 1s infinite;
+        }
+        
+        &.img-shake {
+            animation: img-shake 1s infinite;
+        }
+    }
+
+    .name {
+        position: relative;
+        text-align: left;
+        font-size: 30px;
+        z-index: 1;
+    }
+
+    .description {
+        position: relative;
+        text-align: left;
+        font-size: 25px;
+        line-height: 100px;
+        z-index: 1;     
+    }
+
+    .cool-stuff {
+        position: relative;
+        text-align: left;
+        font-size: 25px;
+        line-height: 100px;
+        z-index: 1;
+    }
+}
+
+.span-background {
+    background-color: $thircirary;
+    display: inline-block;
+    padding: 10px;
+    line-height: 1.5;
+
+    &:nth-child(odd) {
+        transform: rotate(15deg);
+
+        span {
+            display: inline-block;
+            transform: rotate(-15deg);
+        }
+    }
+
+    &:nth-child(even) {
+        transform: rotate(-15deg);
+
+        span {
+            display: inline-block;
+            transform: rotate(15deg);
+        }
+    }
+}

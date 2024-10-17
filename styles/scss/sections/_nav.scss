@@ -1,0 +1,70 @@
+@import '../_var';
+// styles/scss/_var.scss
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba($secondary-rgb, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px 50px;
+    margin: auto;
+    box-shadow: 0 0 1rem rgba($secondary-rgb, 0.5);
+    max-width: 100ch;
+    margin-top: 2rem;
+    z-index: 1000;
+    transform: translate3d(0, 0, 0);
+    transition: all $spring-duration $spring-easing;
+
+    h1 {
+        font-size: 30px;
+        transition: all $spring-duration $spring-easing;
+
+        &:hover {
+            color: $thircirary;
+            scale: 1.02;
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        svg {
+            fill: black;
+            width: 72px;
+            height: 72px;
+            padding: 20px;
+            border-radius: 25px;
+            transition: all $spring-duration $spring-easing;
+            
+            &:hover {
+                background-color: rgba($thircirary-rgb, 0.5);
+                scale: 1.03;
+            }
+
+            &:active {
+                background-color: rgba($thircirary-rgb, 0.5);
+                scale: 0.95;
+            }
+
+            path {
+                fill: black;
+            }
+        }
+
+        a {
+            text-decoration: none;  
+        }
+    }
+}

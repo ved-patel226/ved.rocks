@@ -1,0 +1,122 @@
+.hard-at-work {
+    font-size: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+    span {
+        font-weight: 900;
+        color: var($thircirary);    
+    }
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15%;
+    margin-top: 50px;
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 110px;
+
+        &:nth-child(odd) {
+            transform: translateY(110px);
+        
+            a {
+                .card{
+                    &:hover {
+                        transform: rotate(5deg);
+                        scale: 1.02;
+                        box-shadow: 0 0 2rem rgba($secondary-rgb, 0.5);
+                    }
+
+                    &:active {
+                        transform: rotate(10deg);
+                        scale: 1;
+                        box-shadow: 0 0 1rem rgba($secondary-rgb, 0.5);
+                    }
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            a {
+                .card {
+                    &:hover {
+                        transform: rotate(-5deg);
+                        scale: 1.02;
+                        box-shadow: 0 0 2rem rgba($secondary-rgb, 0.5);                    
+                    }
+
+                    &:active {
+                        transform: rotate(-10deg);
+                        scale: 1;
+                        box-shadow: 0 0 1rem rgba($secondary-rgb, 0.5);
+                    }
+                }
+            }
+        }
+
+        a {
+            .card {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                margin-top: 20px;
+                padding: 20px;
+                border-radius: 20px;
+                background-color: $forciery;
+                box-shadow: 0 0 1rem rgba($secondary-rgb, 0.5);
+                transition: all $spring-duration $spring-easing;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 20px;
+                    pointer-events: none;
+                }
+
+                h1 {
+                    color: black;
+                    position: absolute;
+                    top: 0;
+                    font-size: 24px;
+                    text-align: center;
+                    z-index: 1;
+                    background-color: rgba($forcierty-rgb, 0.9);
+                    border-radius: 20px;
+                    width: 220px;
+                    height: 220px;
+                    padding: 0;
+                    margin-top: 10px;
+                    text-decoration: none;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                svg {
+                    width: 200px;
+                    height: 200px;
+                    fill: $thircirary;
+                    transition: all $spring-duration $spring-easing;
+                }
+            }
+        }
+    }
+}

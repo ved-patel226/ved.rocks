@@ -1,0 +1,55 @@
+@import '../_var';
+
+
+footer {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 200px;
+    margin-bottom: 100px;
+    margin-top: 300px;
+    background-color: $primary;
+    border: 5px solid $primary;
+    border-radius: 25px;
+    color: $forciery;
+    padding: 15px 50px 50px 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    .main-text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+
+        h1 {
+            font-size: 75px;
+            margin-top: 50px;
+        }
+
+        a {
+            margin-left: auto;
+            color: white;
+            width: fit-content;
+            height: fit-content;
+            padding: 0;
+            transition: all $spring-duration $spring-easing;
+        
+            &:hover {
+                text-decoration: underline wavy;
+
+                h2 {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+}
+
+div hr + div {
+    display: block;
+    margin: 0 auto;
+}
