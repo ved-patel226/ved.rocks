@@ -13,21 +13,23 @@
     text-align: center;
     gap: 15%;
 
-    img {
-        width: 200px;
-        height: 200px;
-        transition: all $spring-duration $spring-easing;
-        animation: img-shake 1s infinite;
-    
-        &.spinning {
-            animation: spin 1s infinite;
-        }
-        
-        &.img-shake {
+    .emoji {
+        img {
+            width: 150px;
+            height: 150px;
+            transition: all $spring-duration $spring-easing;
             animation: img-shake 1s infinite;
-        }
+        
+            &.spinning {
+                animation: spin 1s infinite;
+            }
+            
+            &.img-shake {
+                animation: img-shake 1s infinite;
+            }
+        }    
     }
-
+    
     .name {
         position: relative;
         text-align: left;

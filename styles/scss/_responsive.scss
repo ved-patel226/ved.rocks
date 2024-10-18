@@ -7,11 +7,12 @@
     .hero {
         flex-direction: column;
         height: 50vh;
-    }
 
-    .hero img {
-        width: 150px;
-        height: 150px;
+        .emoji {
+            img {
+                display: none;
+            }
+        }
     }
 
     .hero .description {
@@ -108,6 +109,12 @@
     .emoji img {
         position: relative;
         margin-bottom: 100px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+
+        gap: 160px;
     }
 }
 
