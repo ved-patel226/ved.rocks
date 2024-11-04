@@ -1,0 +1,26 @@
+[
+    {
+      "title": "StudySync",
+      "content": "HTML/CSS/JS and Flask (Python) - Tool for students to study more effectively with PDFS",
+      "link": "https://github.com/ved-patel226/chessAI",
+      "img": "public/imgs/cards/reload.png"
+    },
+    {
+      "title": "Card 2",
+      "content": "Content for Card 2",
+      "link": "/card2",
+      "img": "https://picsum.photos/150/150"
+    },
+    {
+      "title": "Card 3",
+      "content": "Content for Card 3",
+      "link": "/card3",
+      "img": "https://picsum.photos/150/150"
+    },
+    {
+      "title": "Card 4",
+      "content": "Content for Card 4",
+      "link": "/card4",
+      "img": "https://picsum.photos/150/150"
+    }
+]
