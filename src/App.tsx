@@ -2,6 +2,7 @@ import NavBar from "./components/navBar";
 import Hero from "./components/hero";
 import Footer from "./components/footer";
 import CardContainer from "./components/CardContainer";
+import Marquee from "./components/Marquee";
 
 function App() {
   const isMobile = window.innerWidth <= 768;
@@ -32,13 +33,15 @@ function App() {
       <Hero />
       <hr className="w-3/4 mx-auto my-20 border-2 border-primary" />
       <h1 className="text-center font-bold text-5xl text-primary">
-        My Projects:
+        Highlighted Projects:
       </h1>
 
       <CardContainer direction={false} file={1} />
       <CardContainer direction={true} file={2} />
 
       <hr className="w-3/4 mx-auto my-20 border-2 border-primary" />
+
+      <Marquee />
 
       <Footer project="ved.rocks" name="Ved Patel" />
     </>

@@ -8,19 +8,19 @@
     {
       "title": "SeatWiz",
       "content": "Made with React and Flask (Python) - Intelligent Seating Arrangement Software for Schools",
-      "link": "/card2",
+      "link": "https://github.com/ved-patel226/SeatWiz",
       "img": "https://svgsilh.com/svg/157788.svg"
     },
     {
       "title": "Album Magic",
       "content": "HTML/SCSS/JS and Flask (Python) - A web app that displays the current playing song beautifully",
-      "link": "/card3",
+      "link": "https://github.com/ved-patel226/AlbumMagic",
       "img": "/imgs/cards/albumMagic.png"
     },
     {
       "title": "ClearCanvas",
       "content": "HTML/CSS/JS and Flask (Python) - Software for students to report problems in their school",
-      "link": "/card4",
+      "link": "https://github.com/ved-patel226/ClearCanvas-Congressional-App-Challenge-24",
       "img": "/imgs/cards/eraser.png"
     }
 ]
