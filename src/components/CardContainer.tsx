@@ -11,17 +11,14 @@ interface CardContainerProps {
 const CardContainer: React.FC<CardContainerProps> = ({ direction, file }) => {
   let startOffset = window.innerWidth * -1.25;
   let scrollLength = 2500;
-
   if (window.innerWidth <= 1080) {
     startOffset = window.innerWidth * 0.25;
     scrollLength = 1000;
-
     if (direction) {
       startOffset = startOffset * -5;
     }
   } else {
     startOffset = window.innerWidth * 0.25;
-
     if (direction) {
       startOffset = startOffset * -1.25;
     }
@@ -29,6 +26,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ direction, file }) => {
 
   const [offset, setOffset] = useState(startOffset);
   const [cards, setCards] = useState([]);
+  const [unblurredIndices, setUnblurredIndices] = useState<number[]>([]);
 
   useEffect(() => {
     setCards(file === 1 ? cardDataProjects : cardDataProjects2);
@@ -37,12 +35,28 @@ const CardContainer: React.FC<CardContainerProps> = ({ direction, file }) => {
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const directionMultiplier = direction ? 1 : -1;
-    setOffset(
+
+    const newOffset =
       startOffset +
-        directionMultiplier *
-          scrollPosition *
-          (window.innerWidth / scrollLength)
-    );
+      directionMultiplier * scrollPosition * (window.innerWidth / scrollLength);
+
+    setOffset(newOffset);
+
+    // Calculate which cards should be unblurred
+    const indicesToUnblur: number[] = [];
+    const containerWidth = window.innerWidth;
+    const cardWidth = 300; // Assuming all cards have the same width
+
+    cards.forEach((card, index) => {
+      const cardRect = document
+        .querySelector(`[data-index="${index}"]`)
+        .getBoundingClientRect();
+      if (cardRect.right > 0 && cardRect.left < containerWidth) {
+        indicesToUnblur.push(index);
+      }
+    });
+
+    setUnblurredIndices(indicesToUnblur);
   };
 
   useEffect(() => {
@@ -52,14 +66,26 @@ const CardContainer: React.FC<CardContainerProps> = ({ direction, file }) => {
     };
   }, [direction]);
 
+  console.log(unblurredIndices);
+
   return (
     <div
       className="flex mt-[10vh] gap-32"
       style={{ transform: `translateX(${offset}px)` }}
     >
       {cards.map((card, index) => (
-        <a key={index} href={card.link} className="min-w-[300px]">
-          <Card title={card.title} content={card.content} img={card.img} />
+        <a
+          key={index}
+          href={card.link}
+          className="min-w-[300px]"
+          data-index={index}
+        >
+          <Card
+            title={card.title}
+            content={card.content}
+            img={card.img}
+            v2={unblurredIndices.includes(index)}
+          />
         </a>
       ))}
     </div>

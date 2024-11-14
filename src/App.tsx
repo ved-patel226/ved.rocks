@@ -3,13 +3,29 @@ import Hero from "./components/hero";
 import Footer from "./components/footer";
 import CardContainer from "./components/CardContainer";
 import Marquee from "./components/Marquee";
+import InteractiveScroll from "./components/InteractiveScroll";
 
 function App() {
-  const isMobile = window.innerWidth <= 768;
+  let isMobile = window.innerWidth <= 768;
+
+  const isTablet = () => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return (
+      userAgent.includes("ipad") ||
+      (userAgent.includes("android") && !userAgent.includes("mobile")) ||
+      (navigator.maxTouchPoints &&
+        navigator.maxTouchPoints > 1 &&
+        window.innerWidth <= 1024)
+    );
+  };
+
+  console.log("Mobile:", isTablet());
+
+  isMobile = isMobile || isTablet();
 
   return (
     <>
-      {isMobile && (
+      {isMobile ? (
         <div className="fixed inset-0 flex items-center justify-center bg-white z-50 w-full h-full">
           <div className="p-5 text-center bg-black text-white shadow-lg w-full h-full flex flex-col justify-center">
             <h2 className="text-xl font-bold">
@@ -18,32 +34,43 @@ function App() {
             <p>Please switch to a desktop for a better experience.</p>
           </div>
         </div>
+      ) : (
+        <>
+          <div className="mb-12">
+            <NavBar>
+              <button className="btn btn-ghost btn-circle">
+                <img
+                  className="w-8 rounded-3xl cursor-pointer"
+                  src="/imgs/emoji.png"
+                  alt=""
+                />
+              </button>
+            </NavBar>
+          </div>
+          <Hero />
+          <hr className="w-3/4 mx-auto my-20 border-2 border-primary" />
+          <h1 className="text-center font-bold text-5xl text-primary">
+            Highlighted Projects:
+          </h1>
+
+          <CardContainer direction={false} file={1} />
+          <CardContainer direction={true} file={2} />
+
+          <hr className="w-3/4 mx-auto my-20 border-2 border-primary" />
+
+          <Marquee />
+
+          <hr className="w-3/4 mx-auto my-20 border-2 border-primary" />
+          <h1 className="text-center font-bold text-5xl text-primary">
+            Achievments
+          </h1>
+
+          <InteractiveScroll />
+
+          <ReachOut />
+          <Footer project="ved.rocks" name="Ved Patel" />
+        </>
       )}
-      <div className="mb-12">
-        <NavBar>
-          <button className="btn btn-ghost btn-circle">
-            <img
-              className="w-8 rounded-3xl cursor-pointer"
-              src="/imgs/emoji.png"
-              alt=""
-            />
-          </button>
-        </NavBar>
-      </div>
-      <Hero />
-      <hr className="w-3/4 mx-auto my-20 border-2 border-primary" />
-      <h1 className="text-center font-bold text-5xl text-primary">
-        Highlighted Projects:
-      </h1>
-
-      <CardContainer direction={false} file={1} />
-      <CardContainer direction={true} file={2} />
-
-      <hr className="w-3/4 mx-auto my-20 border-2 border-primary" />
-
-      <Marquee />
-
-      <Footer project="ved.rocks" name="Ved Patel" />
     </>
   );
 }

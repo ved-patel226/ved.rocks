@@ -8,11 +8,11 @@ module.exports = {
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' }, // Only translate half for smooth looping
+          '100%': { transform: 'translateX(-50%)' }, 
         },
       },
       animation: {
-        marquee: 'marquee 15s linear infinite', // Increase duration if needed
+        marquee: 'marquee 15s linear infinite', 
       },
     },
   },
