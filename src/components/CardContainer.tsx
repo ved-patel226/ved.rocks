@@ -25,7 +25,9 @@ const CardContainer: React.FC<CardContainerProps> = ({ direction, file }) => {
   }
 
   const [offset, setOffset] = useState(startOffset);
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState<
+    { title: string; content: string; link: string; img: string }[]
+  >([]);
   const [unblurredIndices, setUnblurredIndices] = useState<number[]>([]);
 
   useEffect(() => {
@@ -42,17 +44,16 @@ const CardContainer: React.FC<CardContainerProps> = ({ direction, file }) => {
 
     setOffset(newOffset);
 
-    // Calculate which cards should be unblurred
     const indicesToUnblur: number[] = [];
     const containerWidth = window.innerWidth;
-    const cardWidth = 300; // Assuming all cards have the same width
 
-    cards.forEach((card, index) => {
-      const cardRect = document
-        .querySelector(`[data-index="${index}"]`)
-        .getBoundingClientRect();
-      if (cardRect.right > 0 && cardRect.left < containerWidth) {
-        indicesToUnblur.push(index);
+    cards.forEach((_, index) => {
+      const cardElement = document.querySelector(`[data-index="${index}"]`);
+      if (cardElement) {
+        const cardRect = cardElement.getBoundingClientRect();
+        if (cardRect.right > 0 && cardRect.left < containerWidth) {
+          indicesToUnblur.push(index); // Push index (a number)
+        }
       }
     });
 

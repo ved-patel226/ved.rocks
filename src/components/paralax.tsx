@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-
 const ParallaxCard: React.FC = () => {
   return (
     <>
