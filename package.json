@@ -4,7 +4,7 @@
   "proxy": "http://127.0.0.1:5000",
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ved.rocks",
+  "homepage": "https://ved-patel226.github.io/ved.rocks",
   "scripts": {
     "build": "tsc -b && vite build",
     "predeploy": "npm run build",
