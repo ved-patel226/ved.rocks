@@ -1,4 +1,4 @@
-import NavBar from "./components/navBar";
+import NavBar from "./components/navBar.tsx";
 import Hero from "./components/hero";
 import Footer from "./components/footer";
 import CardContainer from "./components/CardContainer";

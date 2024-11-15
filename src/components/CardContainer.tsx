@@ -67,8 +67,6 @@ const CardContainer: React.FC<CardContainerProps> = ({ direction, file }) => {
     };
   }, [direction]);
 
-  console.log(unblurredIndices);
-
   return (
     <div
       className="flex mt-[10vh] gap-32"
