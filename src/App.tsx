@@ -32,15 +32,7 @@ function App() {
       ) : (
         <>
           <div className="mb-12">
-            <NavBar>
-              <button className="btn btn-ghost btn-circle">
-                <img
-                  className="w-8 rounded-3xl cursor-pointer"
-                  src="/imgs/emoji.png"
-                  alt=""
-                />
-              </button>
-            </NavBar>
+            <NavBar />
           </div>
           <Hero />
           <hr className="w-3/4 mx-auto my-20 border-2 border-primary" />
