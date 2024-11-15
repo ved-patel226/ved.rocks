@@ -1,7 +1,3 @@
-interface NavBarProps {
-  children: React.ReactNode;
-}
-
 function NavBar() {
   return (
     <div className="navbar bg-transparent shadow-lg backdrop-blur-lg sticky top-0 z-10 w-9/12 mx-auto mt-5 rounded-full px-6">
