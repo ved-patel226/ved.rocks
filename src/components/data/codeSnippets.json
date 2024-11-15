@@ -1,6 +1,9 @@
 {
     "python": " class Fibonacci:\n    def __init__(self, max):\n        self.max = max\n\n    def sequence(self):\n        a, b = 0, 1\n        while a < self.max:\n            yield a\n            a, b = b, a + b\n\n  fib = Fibonacci(100)\n  print(list(fib.sequence()))",
 
-    "javascript": " function asyncFetch(url) {\n    return new Promise((resolve, reject) => {\n        fetch(url)\n            .then(response => response.json())\n            .then(data => resolve(data))\n            .catch(error => reject(error));\n    });\n  }\n\n  asyncFetch('https://jsonplaceholder.typicode.com/todos/1')\n      .then(data => console.log(data))\n      .catch(error => console.error(error));"    
+    "javascript": " function asyncFetch(url) {\n    return new Promise((resolve, reject) => {\n        fetch(url)\n            .then(response => response.json())\n            .then(data => resolve(data))\n            .catch(error => reject(error));\n    });\n  }\n\n  asyncFetch('https://jsonplaceholder.typicode.com/todos/1')\n      .then(data => console.log(data))\n      .catch(error => console.error(error));",
+
+    "java": " public class Palindrome {\n    public static boolean isPalindrome(String word) {\n        String reversed = new StringBuilder(word).reverse().toString();\n        return word.equals(reversed);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isPalindrome(\"radar\"));\n    }\n  }"
+
 }
   

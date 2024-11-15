@@ -4,18 +4,20 @@ import Footer from "./components/footer";
 import CardContainer from "./components/CardContainer";
 import Marquee from "./components/Marquee";
 import InteractiveScroll from "./components/InteractiveScroll";
+import ContactMe from "./components/contactMe";
+import MobileView from "./components/mobileView";
 
 function App() {
-  let isMobile = window.innerWidth <= 768;
+  let isMobile: boolean = window.innerWidth <= 768;
 
   const isTablet = () => {
     const userAgent = navigator.userAgent.toLowerCase();
-    return (
+    return Boolean(
       userAgent.includes("ipad") ||
-      (userAgent.includes("android") && !userAgent.includes("mobile")) ||
-      (navigator.maxTouchPoints &&
-        navigator.maxTouchPoints > 1 &&
-        window.innerWidth <= 1024)
+        (userAgent.includes("android") && !userAgent.includes("mobile")) ||
+        (navigator.maxTouchPoints &&
+          navigator.maxTouchPoints > 1 &&
+          window.innerWidth <= 1024)
     );
   };
 
@@ -26,14 +28,7 @@ function App() {
   return (
     <>
       {isMobile ? (
-        <div className="fixed inset-0 flex items-center justify-center bg-white z-50 w-full h-full">
-          <div className="p-5 text-center bg-black text-white shadow-lg w-full h-full flex flex-col justify-center">
-            <h2 className="text-xl font-bold">
-              This site is best viewed on a desktop.
-            </h2>
-            <p>Please switch to a desktop for a better experience.</p>
-          </div>
-        </div>
+        <MobileView />
       ) : (
         <>
           <div className="mb-12">
@@ -66,9 +61,9 @@ function App() {
           </h1>
 
           <InteractiveScroll />
+          <ContactMe />
 
-          <ReachOut />
-          <Footer project="ved.rocks" name="Ved Patel" />
+          <Footer name="Ved Patel" />
         </>
       )}
     </>

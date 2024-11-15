@@ -18,7 +18,7 @@ module.exports = {
   },
   daisyui: {
     themes: [
-      "cmyk",
+      "lofi",
       "dim",
     ],
   },

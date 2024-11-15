@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const ThemeSwitcher = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dim");
@@ -9,7 +9,7 @@ const ThemeSwitcher = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "dim" ? "cmyk" : "dim"));
+    setTheme((prevTheme) => (prevTheme === "dim" ? "lofi" : "dim"));
   };
 
   return (
@@ -18,7 +18,7 @@ const ThemeSwitcher = () => {
         <input
           type="checkbox"
           className="theme-controller"
-          checked={theme === "cmyk"}
+          checked={theme === "lofi"}
           readOnly
         />
 

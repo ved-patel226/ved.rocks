@@ -3,16 +3,24 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { solarizedlight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import codeSnippets from "./data/codeSnippets.json";
 
+type CodeSnippets = {
+  python: string;
+  javascript: string;
+  java: string;
+};
+
 function Hero() {
   const [code, setCode] = useState("");
   const [currentLangIndex, setCurrentLangIndex] = useState(0);
 
-  const codeKeys = Object.keys(codeSnippets);
+  const codeKeys = Object.keys(codeSnippets) as (keyof CodeSnippets)[];
   const codeString = codeSnippets[codeKeys[currentLangIndex]];
 
   useEffect(() => {
     let index = 0;
     let firstIteration = true;
+
+    let timeoutId: number;
 
     const typeCode = () => {
       if (firstIteration === true) {
@@ -21,10 +29,10 @@ function Hero() {
       if (index < codeString.length - 1) {
         setCode((prev) => prev + codeString[index]);
         index++;
-        setTimeout(typeCode, 20);
+        timeoutId = window.setTimeout(typeCode, 20);
         firstIteration = false;
       } else {
-        setTimeout(() => {
+        timeoutId = window.setTimeout(() => {
           setCode("");
           index = 0;
           setCurrentLangIndex((prev) => (prev + 1) % codeKeys.length);
@@ -34,7 +42,7 @@ function Hero() {
 
     typeCode();
 
-    return () => clearTimeout(typeCode);
+    return () => clearTimeout(timeoutId);
   }, [codeString, currentLangIndex]);
 
   return (

@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import Card from "./Card";
 
 function InteractiveScroll() {
   const [scroll, setScroll] = useState(0);
-  const divRef2 = useRef(null);
+  const divRef2 = useRef<HTMLDivElement>(null);
   const [divHeight, setDivHeight] = useState(0);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ function InteractiveScroll() {
   const children = [
     {
       id: 1,
-      speed: 0.8,
+      speed: 0.5,
       title: "HACKJPS 2024",
       content: "2nd in Industry Hack - Additional content can go here.",
       image:
@@ -48,28 +48,46 @@ function InteractiveScroll() {
     },
     {
       id: 2,
-      speed: 0.75,
+      speed: 0.55,
       title: "WorthyHacks",
       content: "5th in general - Additional content can go here.",
       image:
-        "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/002/955/746/datas/medium.png",
+        "https://static.wixstatic.com/media/605209_bc9cc31657804e84b9089a0e260d8687~mv2.png/v1/fill/w_501,h_490,al_c,lg_1,q_85,enc_auto/605209_bc9cc31657804e84b9089a0e260d8687~mv2.png",
       link: "https://devpost.com/software/fridgy",
     },
     {
       id: 3,
-      speed: 0.85,
-      title: "Soario",
-      content: "Participation - Additional content can go here.",
-      image:
-        "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/002/970/708/datas/medium.png",
-    },
-    {
-      id: 4,
-      speed: 0.8,
+      speed: 0.55,
       title: "EHS HACKS",
       content: "3rd and 2nd over 2 years - Additional content can go here.",
       image:
         "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/002/733/612/datas/medium.jpg",
+      link: "https://github.com/ved-patel226/STUDY-SYNC",
+    },
+    {
+      id: 4,
+      speed: 0.45,
+      title: "CS50AI",
+      content: "Certified - Additional content can go here.",
+      image:
+        "https://lh3.googleusercontent.com/3EkakBnPEBWRAsnakJz-0P6o59mETN_mqQx9vK1MdpdUCTeltbeB3FVJAqcuzv3bz-EmXsOn6kRPVvNQt-e04jQV3wuEkeNxgQDKnJyM2iF3f8pnX9F5dqXGHk1UZADAs2dvtvf4aoTcNxPIrhivwKc",
+      link: "https://certificates.cs50.io/af75a63c-b403-43f0-b560-d6c8c0cb555e.pdf?size=letter",
+    },
+    {
+      id: 5,
+      speed: 0.5,
+      title: "PCEP",
+      content: "Python Certified Beginner - Additional content can go here.",
+      image: "https://pythoninstitute.org/assets/61f11fac8e6f4153315957.png",
+      link: "https://www.credly.com/earner/earned/badge/1df5efe2-91b8-46d3-9c41-02d2f557a2d8",
+    },
+    {
+      id: 6,
+      speed: 0.55,
+      title: "PCAP",
+      content: "Python Certified Associate - Additional content can go here.",
+      image: "https://pythoninstitute.org/assets/61f11f7719dd3800707549.png",
+      link: "https://www.credly.com/badges/ed33b117-77d0-46b1-96e2-9476f44b313c/public_url",
     },
   ];
 
@@ -79,9 +97,9 @@ function InteractiveScroll() {
     }vh`;
   });
 
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const handleMouseEnter = (index) => setHoveredIndex(index);
+  const handleMouseEnter = (index: number) => setHoveredIndex(index);
   const handleMouseLeave = () => setHoveredIndex(null);
 
   return (
