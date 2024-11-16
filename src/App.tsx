@@ -21,9 +21,9 @@ function App() {
     );
   };
 
-  console.log("Mobile:", isTablet());
-
   isMobile = isMobile || isTablet();
+
+  console.log("Mobile:", isMobile);
 
   return (
     <>
