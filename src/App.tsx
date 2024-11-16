@@ -2,7 +2,7 @@ import NavBar from "./components/navBar.tsx";
 import Hero from "./components/hero";
 import Footer from "./components/footer";
 import CardContainer from "./components/CardContainer";
-import Marquee from "./components/Marquee";
+import MarqueeIcons from "./components/Marquee";
 import InteractiveScroll from "./components/InteractiveScroll";
 import ContactMe from "./components/contactMe";
 import MobileView from "./components/mobileView";
@@ -45,7 +45,7 @@ function App() {
 
           <hr className="w-3/4 mx-auto my-20 border-2 border-primary" />
 
-          <Marquee />
+          <MarqueeIcons />
 
           <hr className="w-3/4 mx-auto my-20 border-2 border-primary" />
           <h1 className="text-center font-bold text-5xl text-primary">

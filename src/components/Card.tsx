@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ title, content, img, v2 = false }) => {
     formattedContent[1] = "Click to view";
 
     return (
-      <div className="card image-full w-full h-52 cursor-pointer transition-all hover:blur-none hover:-translate-y-[15px] hover:shadow-2xl active:translate-y-[0px] active:shadow-none border-4 border-primary ">
+      <div className="card image-full w-full cursor-pointer transition-all hover:blur-none hover:-translate-y-[15px] hover:shadow-2xl active:translate-y-[0px] active:shadow-none border-4 border-primary ">
         <figure>
           <img
             src={img}

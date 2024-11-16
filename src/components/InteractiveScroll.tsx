@@ -70,7 +70,7 @@ function InteractiveScroll() {
       title: "CS50AI",
       content: "Certified - Additional content can go here.",
       image:
-        "https://lh3.googleusercontent.com/3EkakBnPEBWRAsnakJz-0P6o59mETN_mqQx9vK1MdpdUCTeltbeB3FVJAqcuzv3bz-EmXsOn6kRPVvNQt-e04jQV3wuEkeNxgQDKnJyM2iF3f8pnX9F5dqXGHk1UZADAs2dvtvf4aoTcNxPIrhivwKc",
+        "https://static.wixstatic.com/media/b2923a_a8e9b98620404d3fb7a01c163d2c6d66~mv2.png/v1/fill/w_440,h_428,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Harvard_shield_obedience_wreath.png",
       link: "https://certificates.cs50.io/af75a63c-b403-43f0-b560-d6c8c0cb555e.pdf?size=letter",
     },
     {

@@ -8,7 +8,7 @@ function ContactMe() {
       </div>
 
       <div className="bg-base-200 px-6 py-16">
-        <div className="flex flex-col items-center justify-center py-52">
+        <div className="flex flex-col items-center justify-center h-[50vh]">
           <h1 className="text-2xl font-bold text-center mb-4">
             Since you're already here...
           </h1>

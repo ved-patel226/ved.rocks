@@ -17,7 +17,7 @@ function Footer({ name }: FooterProps) {
           - All right reserved
         </p>
       </aside>
-      <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+      <nav className="grid-flow-col gap-8 md:place-self-center md:justify-self-end">
         <a href="https://github.com/ved-patel226">
           <svg
             width="32"

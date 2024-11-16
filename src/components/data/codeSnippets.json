@@ -1,9 +1,7 @@
 {
-    "python": " class Fibonacci:\n    def __init__(self, max):\n        self.max = max\n\n    def sequence(self):\n        a, b = 0, 1\n        while a < self.max:\n            yield a\n            a, b = b, a + b\n\n  fib = Fibonacci(100)\n  print(list(fib.sequence()))",
-
-    "javascript": " function asyncFetch(url) {\n    return new Promise((resolve, reject) => {\n        fetch(url)\n            .then(response => response.json())\n            .then(data => resolve(data))\n            .catch(error => reject(error));\n    });\n  }\n\n  asyncFetch('https://jsonplaceholder.typicode.com/todos/1')\n      .then(data => console.log(data))\n      .catch(error => console.error(error));",
-
-    "java": " public class Palindrome {\n    public static boolean isPalindrome(String word) {\n        String reversed = new StringBuilder(word).reverse().toString();\n        return word.equals(reversed);\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isPalindrome(\"radar\"));\n    }\n  }"
-
+    "react": "import React, { useState } from 'react';\n\n  function Counter() {\n\tconst [count, setCount] = useState(0);\n\n\treturn (\n\t\t<div>\n\t\t\t<p>You clicked {count} times</p>\n\t\t\t<button onClick={() => setCount(count + 1)}>\n\t\t\t\tClick me\n\t\t\t</button>\n\t\t</div>\n\t);\n  }\n\n  export default Counter;",
+    "java": "public class Palindrome {\n\tpublic static boolean isPalindrome(String word) {\n\t\tString reversed = new StringBuilder(word).reverse().toString();\n\t\treturn word.equals(reversed);\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tSystem.out.println(isPalindrome(\"radar\"));\n\t}\n  }",
+    "python": "class Fibonacci:\n\tdef __init__(self, max):\n\t\tself.max = max\n\n\tdef sequence(self):\n\t\ta, b = 0, 1\n\t\twhile a < self.max:\n\t\t\tyield a\n\t\t\ta, b = b, a + b\n\n  fib = Fibonacci(100)\n  print(list(fib.sequence()))",
+    "javascript": "function asyncFetch(url) {\n\treturn new Promise((resolve, reject) => {\n\t\tfetch(url)\n\t\t\t.then(response => response.json())\n\t\t\t.then(data => resolve(data))\n\t\t\t.catch(error => reject(error));\n\t});\n  }\n\n  asyncFetch('https://jsonplaceholder.typicode.com/todos/1')\n\t  .then(data => console.log(data))\n\t  .catch(error => console.error(error));"
 }
   
