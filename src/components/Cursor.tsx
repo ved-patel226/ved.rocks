@@ -8,7 +8,6 @@ export default function Cursor() {
       innerScale={1}
       outerScale={2}
       outerAlpha={0}
-      hasBlendMode={true}
       innerStyle={{
         backgroundColor: "rgb(187, 186, 186)",
         zIndex: 9999,

@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from "../../css/components/FirstPage/Hero.module.css";
 import base from "../../css/index.module.css";
-import { Timeout } from "timers";
 import { BiDownArrow } from "react-icons/bi";
 
 function Hero() {
   const [showArrow, setShowArrow] = useState(false);
 
-  let timeoutId: Timeout;
+  let timeoutId: ReturnType<typeof setTimeout>;
 
   const handleScroll = () => {
     if (window.scrollY === 0) {

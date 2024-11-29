@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "sass": "sass --watch src/scss:src/css"
+    "sass": "sass --watch src/scss:src/css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@devnomic/marquee": "^1.0.2",
@@ -25,9 +27,11 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@types/aos": "^3.0.7",
     "@types/node": "^22.10.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "@vitejs/plugin-react": "^4.3.3",
     "eslint": "^9.13.0",
     "eslint-plugin-react-hooks": "^5.0.0",

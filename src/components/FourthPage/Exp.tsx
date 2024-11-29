@@ -1,4 +1,3 @@
-import styles from "../../css/components/FourthPage/exp.module.css";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
