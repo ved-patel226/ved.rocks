@@ -1,0 +1,85 @@
+@use "variables"as vars;
+
+@mixin glow-border() {
+    position: relative;
+    background: linear-gradient(to bottom right,
+            hsl(0, 0%, 25%) 0%,
+            hsl(0, 0%, 50%) 100%);
+
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    z-index: 1;
+    transition: all ease 0.5s;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 1px;
+        background: vars.$first;
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+    &:hover {
+        background-color: red;
+
+    }
+
+    transition: all ease 0.5s;
+}
+
+@mixin text-fade-anim-h1() {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 65%) 20%, hsl(0, 0%, 30%) 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 10s infinite vars.$spring;
+}
+
+@mixin text-fade-anim-p() {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: right;
+
+    color: vars.$second-text;
+    animation: color-change 3s infinite;
+}
+
+@mixin grow-anim() {
+    animation: grow-shine 2s forwards vars.$spring;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    50% {
+        background-position: 100vw;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+
+@keyframes grow-shine {
+    0% {
+        font-size: 20vh;
+        line-height: 15vh;
+        letter-spacing: -10px;
+    }
+
+    100% {
+        font-size: 30vh;
+        line-height: 25vh;
+        letter-spacing: 25px;
+    }
+}

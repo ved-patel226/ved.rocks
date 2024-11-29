@@ -1,0 +1,83 @@
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100vw;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+@keyframes grow-shine {
+  0% {
+    font-size: 20vh;
+    line-height: 15vh;
+    letter-spacing: -10px;
+  }
+  100% {
+    font-size: 30vh;
+    line-height: 25vh;
+    letter-spacing: 25px;
+  }
+}
+.nav {
+  position: relative;
+  background: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsl(0, 0%, 50%) 100%);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+  z-index: 1;
+  transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  backdrop-filter: blur(10px);
+  min-width: fit-content;
+  max-width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  position: sticky;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #000000;
+  border-radius: inherit;
+  z-index: -1;
+}
+.nav:hover {
+  background-color: red;
+}
+.nav > div:first-child {
+  padding: 0;
+  line-height: 0;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.nav > div:last-child {
+  align-self: center;
+  background-color: transparent;
+  font-size: 2.5rem;
+  line-height: 0;
+  display: flex;
+  gap: 30px;
+}
+.nav > div:last-child svg {
+  transition: all 0.5s linear(0, 0.0017, 0.0065 1.13%, 0.0277 2.39%, 0.065, 0.1136 5.21%, 0.2201 7.74%, 0.4789 13.23%, 0.592 15.77%, 0.699 18.44%, 0.7863, 0.859 23.51%, 0.9202, 0.9668 28.86%, 0.986 30.27%, 1.0033 31.82%, 1.0222 34.07%, 1.0359 36.6%, 1.0436 39.28%, 1.046 42.24%, 1.0447 44.63%, 1.0407 47.45%, 1.0119 61.81%, 1.0026 69.55%, 0.9981 80.53%, 0.9991 99.96%);
+}
+.nav > div:last-child svg:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+.nav > div:last-child svg:active {
+  scale: 1;
+}
+
+/*# sourceMappingURL=Nav.module.css.map */

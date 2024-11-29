@@ -1,0 +1,88 @@
+@use "variables"as vars;
+
+body {
+    background-color: vars.$first;
+    color: vars.$first-text;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+hr.giant {
+    border: 0;
+    height: 1px;
+    // background: vars.$third;
+    margin: 10vh 0;
+}
+
+div.underline {
+    margin-bottom: 20px;
+    text-align: center;
+
+    h1 {
+        display: inline-block;
+        position: relative;
+        font-size: 3rem;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 150%;
+            height: 2px;
+            background-color: vars.$first-text;
+            position: absolute;
+            left: -25%;
+            bottom: -2px;
+        }
+    }
+}
+
+svg.loader {
+    animation: up-down 1s vars.$spring infinite;
+    font-size: 5vh;
+    float: right;
+
+    color: vars.$second-text;
+
+    @keyframes up-down {
+        0% {
+            transform: translateY(0);
+        }
+
+        70% {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.mobile {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    div {
+
+        display: flex;
+        gap: 20px;
+
+        svg {
+            color: vars.$first-text;
+            text-decoration: none;
+            font-size: 5vh;
+        }
+    }
+}

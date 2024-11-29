@@ -1,0 +1,51 @@
+@use "../../variables"as vars;
+@use "../../func"as funcs;
+
+.container {
+  display: flex;
+  margin-top: calc(100px + 20px);
+  margin-left: 20px;
+  height: calc(100vh - 100px - 20px);
+
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    div {
+      h1 {
+        @include funcs.text-fade-anim-h1();
+        @include funcs.grow-anim();
+      }
+
+      p {
+        @include funcs.text-fade-anim-p();
+      }
+    }
+  }
+
+  // > div {
+  //     @include funcs.glow-border();
+  // }
+
+  .square {
+    width: 300px;
+    height: 300px;
+
+    padding: 10px;
+  }
+
+  .flat {
+    width: 300px;
+    height: 200px;
+
+    padding: 10px;
+  }
+
+}

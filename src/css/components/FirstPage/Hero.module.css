@@ -1,0 +1,69 @@
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100vw;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+@keyframes grow-shine {
+  0% {
+    font-size: 20vh;
+    line-height: 15vh;
+    letter-spacing: -10px;
+  }
+  100% {
+    font-size: 30vh;
+    line-height: 25vh;
+    letter-spacing: 25px;
+  }
+}
+.container {
+  display: flex;
+  margin-top: 120px;
+  margin-left: 20px;
+  height: calc(100vh - 100px - 20px);
+}
+.container .center {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.container .center div h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 65%) 20%, hsl(0, 0%, 30%) 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 10s infinite linear(0, 0.0017, 0.0065 1.13%, 0.0277 2.39%, 0.065, 0.1136 5.21%, 0.2201 7.74%, 0.4789 13.23%, 0.592 15.77%, 0.699 18.44%, 0.7863, 0.859 23.51%, 0.9202, 0.9668 28.86%, 0.986 30.27%, 1.0033 31.82%, 1.0222 34.07%, 1.0359 36.6%, 1.0436 39.28%, 1.046 42.24%, 1.0447 44.63%, 1.0407 47.45%, 1.0119 61.81%, 1.0026 69.55%, 0.9981 80.53%, 0.9991 99.96%);
+  animation: grow-shine 2s forwards linear(0, 0.0017, 0.0065 1.13%, 0.0277 2.39%, 0.065, 0.1136 5.21%, 0.2201 7.74%, 0.4789 13.23%, 0.592 15.77%, 0.699 18.44%, 0.7863, 0.859 23.51%, 0.9202, 0.9668 28.86%, 0.986 30.27%, 1.0033 31.82%, 1.0222 34.07%, 1.0359 36.6%, 1.0436 39.28%, 1.046 42.24%, 1.0447 44.63%, 1.0407 47.45%, 1.0119 61.81%, 1.0026 69.55%, 0.9981 80.53%, 0.9991 99.96%);
+}
+.container .center div p {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: right;
+  color: #757575;
+  animation: color-change 3s infinite;
+}
+.container .square {
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+}
+.container .flat {
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=Hero.module.css.map */
