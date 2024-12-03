@@ -1,0 +1,30 @@
+"filename", "language", "TypeScript", "TypeScript JSX", "SCSS", "CSS", "comment", "blank", "total"
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/App.tsx", "TypeScript JSX", 0, 48, 0, 0, 0, 10, 58
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/Cursor.tsx", "TypeScript JSX", 0, 21, 0, 0, 0, 2, 23
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/FifthPage/Footer.tsx", "TypeScript JSX", 0, 34, 0, 0, 0, 3, 37
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/FirstPage/Hero.tsx", "TypeScript JSX", 0, 41, 0, 0, 0, 7, 48
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/FirstPage/SpinnyGlobe.tsx", "TypeScript JSX", 0, 50, 0, 0, 0, 11, 61
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/FourthPage/Exp.tsx", "TypeScript JSX", 0, 61, 0, 0, 0, 4, 65
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/Mobile.tsx", "TypeScript JSX", 0, 18, 0, 0, 0, 4, 22
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/SecondPage/Nav.tsx", "TypeScript JSX", 0, 34, 0, 0, 0, 6, 40
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/SecondPage/Skills.tsx", "TypeScript JSX", 0, 89, 0, 0, 0, 4, 93
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/ThirdPage/Projects.tsx", "TypeScript JSX", 0, 56, 0, 0, 0, 7, 63
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/FifthPage/footer.module.css", "CSS", 0, 0, 0, 97, 1, 2, 100
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/FirstPage/Hero.module.css", "CSS", 0, 0, 0, 76, 1, 2, 79
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/FourthPage/exp.module.css", "CSS", 0, 0, 0, 122, 1, 2, 125
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/SecondPage/Nav.module.css", "CSS", 0, 0, 0, 87, 1, 2, 90
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/SecondPage/Skills.module.css", "CSS", 0, 0, 0, 101, 1, 2, 104
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/ThirdPage/Projects.module.css", "CSS", 0, 0, 0, 84, 1, 2, 87
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/index.module.css", "CSS", 0, 0, 0, 70, 1, 7, 78
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/main.tsx", "TypeScript JSX", 0, 8, 0, 0, 0, 2, 10
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/_func.scss", "SCSS", 0, 0, 74, 0, 0, 17, 91
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/_variables.scss", "SCSS", 0, 0, 8, 0, 0, 4, 12
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/FifthPage/footer.module.scss", "SCSS", 0, 0, 55, 0, 0, 14, 69
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/FirstPage/Hero.module.scss", "SCSS", 0, 0, 36, 0, 3, 12, 51
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/FourthPage/exp.module.scss", "SCSS", 0, 0, 77, 0, 0, 15, 92
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/SecondPage/Nav.module.scss", "SCSS", 0, 0, 42, 0, 0, 13, 55
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/SecondPage/Skills.module.scss", "SCSS", 0, 0, 62, 0, 0, 23, 85
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/ThirdPage/Projects.module.scss", "SCSS", 0, 0, 43, 0, 0, 15, 58
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/index.module.scss", "SCSS", 0, 0, 71, 0, 1, 17, 89
+"/mnt/Fedora2/code/websiteREDO/ved.rocks/src/vite-env.d.ts", "TypeScript", 0, 0, 0, 0, 1, 1, 2
+"Total", "-", 0, 460, 468, 637, 12, 210, 1787

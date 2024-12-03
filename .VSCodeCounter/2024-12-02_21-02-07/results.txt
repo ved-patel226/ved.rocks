@@ -1,0 +1,79 @@
+Date : 2024-12-02 21:02:07
+Directory : /mnt/Fedora2/code/websiteREDO/ved.rocks/src
+Total : 28 files,  1565 codes, 12 comments, 210 blanks, all 1787 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| CSS            |          7 |        637 |          7 |         19 |        663 |
+| SCSS           |          9 |        468 |          4 |        130 |        602 |
+| TypeScript JSX |         11 |        460 |          0 |         60 |        520 |
+| TypeScript     |          1 |          0 |          1 |          1 |          2 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                       | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                          |         28 |      1,565 |         12 |        210 |      1,787 |
+| . (Files)                                                                                  |          3 |         56 |          1 |         13 |         70 |
+| components                                                                                 |          9 |        404 |          0 |         48 |        452 |
+| components (Files)                                                                         |          2 |         39 |          0 |          6 |         45 |
+| components/FifthPage                                                                       |          1 |         34 |          0 |          3 |         37 |
+| components/FirstPage                                                                       |          2 |         91 |          0 |         18 |        109 |
+| components/FourthPage                                                                      |          1 |         61 |          0 |          4 |         65 |
+| components/SecondPage                                                                      |          2 |        123 |          0 |         10 |        133 |
+| components/ThirdPage                                                                       |          1 |         56 |          0 |          7 |         63 |
+| css                                                                                        |          7 |        637 |          7 |         19 |        663 |
+| css (Files)                                                                                |          1 |         70 |          1 |          7 |         78 |
+| css/components                                                                             |          6 |        567 |          6 |         12 |        585 |
+| css/components/FifthPage                                                                   |          1 |         97 |          1 |          2 |        100 |
+| css/components/FirstPage                                                                   |          1 |         76 |          1 |          2 |         79 |
+| css/components/FourthPage                                                                  |          1 |        122 |          1 |          2 |        125 |
+| css/components/SecondPage                                                                  |          2 |        188 |          2 |          4 |        194 |
+| css/components/ThirdPage                                                                   |          1 |         84 |          1 |          2 |         87 |
+| scss                                                                                       |          9 |        468 |          4 |        130 |        602 |
+| scss (Files)                                                                               |          3 |        153 |          1 |         38 |        192 |
+| scss/components                                                                            |          6 |        315 |          3 |         92 |        410 |
+| scss/components/FifthPage                                                                  |          1 |         55 |          0 |         14 |         69 |
+| scss/components/FirstPage                                                                  |          1 |         36 |          3 |         12 |         51 |
+| scss/components/FourthPage                                                                 |          1 |         77 |          0 |         15 |         92 |
+| scss/components/SecondPage                                                                 |          2 |        104 |          0 |         36 |        140 |
+| scss/components/ThirdPage                                                                  |          1 |         43 |          0 |         15 |         58 |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                   | language       | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/App.tsx                                        | TypeScript JSX |         48 |          0 |         10 |         58 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/Cursor.tsx                          | TypeScript JSX |         21 |          0 |          2 |         23 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/FifthPage/Footer.tsx                | TypeScript JSX |         34 |          0 |          3 |         37 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/FirstPage/Hero.tsx                  | TypeScript JSX |         41 |          0 |          7 |         48 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/FirstPage/SpinnyGlobe.tsx           | TypeScript JSX |         50 |          0 |         11 |         61 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/FourthPage/Exp.tsx                  | TypeScript JSX |         61 |          0 |          4 |         65 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/Mobile.tsx                          | TypeScript JSX |         18 |          0 |          4 |         22 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/SecondPage/Nav.tsx                  | TypeScript JSX |         34 |          0 |          6 |         40 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/SecondPage/Skills.tsx               | TypeScript JSX |         89 |          0 |          4 |         93 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/components/ThirdPage/Projects.tsx              | TypeScript JSX |         56 |          0 |          7 |         63 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/FifthPage/footer.module.css     | CSS            |         97 |          1 |          2 |        100 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/FirstPage/Hero.module.css       | CSS            |         76 |          1 |          2 |         79 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/FourthPage/exp.module.css       | CSS            |        122 |          1 |          2 |        125 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/SecondPage/Nav.module.css       | CSS            |         87 |          1 |          2 |         90 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/SecondPage/Skills.module.css    | CSS            |        101 |          1 |          2 |        104 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/components/ThirdPage/Projects.module.css   | CSS            |         84 |          1 |          2 |         87 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/css/index.module.css                           | CSS            |         70 |          1 |          7 |         78 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/main.tsx                                       | TypeScript JSX |          8 |          0 |          2 |         10 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/_func.scss                                | SCSS           |         74 |          0 |         17 |         91 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/_variables.scss                           | SCSS           |          8 |          0 |          4 |         12 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/FifthPage/footer.module.scss   | SCSS           |         55 |          0 |         14 |         69 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/FirstPage/Hero.module.scss     | SCSS           |         36 |          3 |         12 |         51 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/FourthPage/exp.module.scss     | SCSS           |         77 |          0 |         15 |         92 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/SecondPage/Nav.module.scss     | SCSS           |         42 |          0 |         13 |         55 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/SecondPage/Skills.module.scss  | SCSS           |         62 |          0 |         23 |         85 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/components/ThirdPage/Projects.module.scss | SCSS           |         43 |          0 |         15 |         58 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/scss/index.module.scss                         | SCSS           |         71 |          1 |         17 |         89 |
+| /mnt/Fedora2/code/websiteREDO/ved.rocks/src/vite-env.d.ts                                  | TypeScript     |          0 |          1 |          1 |          2 |
+| Total                                                                                      |                |      1,565 |         12 |        210 |      1,787 |
++--------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

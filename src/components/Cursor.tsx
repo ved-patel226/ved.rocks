@@ -16,7 +16,7 @@ export default function Cursor() {
         border: "3px solid rgb(187, 186, 186)",
         zIndex: 9999,
       }}
-      clickables={[".click", "svg", "a"]}
+      clickables={[".click", "a"]}
     />
   );
 }

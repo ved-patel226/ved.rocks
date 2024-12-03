@@ -22,17 +22,12 @@
         z-index: -1;
     }
 
-    &:hover {
-        background-color: red;
-
-    }
-
     transition: all ease 0.5s;
 }
 
 @mixin text-fade-anim-h1() {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 700 !important;
     padding: 0;
     box-sizing: border-box;
     margin: 0;
@@ -49,11 +44,11 @@
     text-align: right;
 
     color: vars.$second-text;
-    animation: color-change 3s infinite;
+    animation: color-change 3s infinite, opacity-keyframes 1s forwards;
 }
 
 @mixin grow-anim() {
-    animation: grow-shine 2s forwards vars.$spring;
+    animation: grow-shine 2s forwards vars.$spring, opacity-keyframes 1s forwards;
 }
 
 @keyframes shine {
@@ -74,12 +69,23 @@
     0% {
         font-size: 20vh;
         line-height: 15vh;
-        letter-spacing: -10px;
     }
 
     100% {
-        font-size: 30vh;
-        line-height: 25vh;
+        font-size: 25vh;
+        line-height: 20vh;
         letter-spacing: 25px;
+    }
+}
+
+@keyframes opacity-keyframes {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
     }
 }

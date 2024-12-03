@@ -21,6 +21,7 @@ function Nav() {
           onClick={() =>
             (window.location.href = "https://github.com/ved-patel226")
           }
+          className="click"
         />
 
         <SiCodersrank
@@ -28,6 +29,7 @@ function Nav() {
             (window.location.href =
               "https://profile.codersrank.io/user/ved-patel226")
           }
+          className="click"
         />
       </div>
     </div>

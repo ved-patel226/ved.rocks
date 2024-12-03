@@ -13,12 +13,21 @@
   0% {
     font-size: 20vh;
     line-height: 15vh;
-    letter-spacing: -10px;
   }
   100% {
-    font-size: 30vh;
-    line-height: 25vh;
+    font-size: 25vh;
+    line-height: 20vh;
     letter-spacing: 25px;
+  }
+}
+@keyframes opacity-keyframes {
+  0% {
+    opacity: 0;
+    filter: blur(30px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
   }
 }
 .footer {
@@ -41,7 +50,7 @@
 }
 .footer .text h1 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 700 !important;
   padding: 0;
   box-sizing: border-box;
   margin: 0;
@@ -56,7 +65,7 @@
   font-weight: 700;
   text-align: right;
   color: #757575;
-  animation: color-change 3s infinite;
+  animation: color-change 3s infinite, opacity-keyframes 1s forwards;
   text-align: left;
 }
 .footer .text p a {
