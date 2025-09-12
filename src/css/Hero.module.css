@@ -1,0 +1,35 @@
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  align-items: flex-end;
+  padding: 15px 20px;
+  height: 100vh;
+  width: 100vw;
+}
+.hero .bottom_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+.hero .bottom_left h1 {
+  max-width: 50rem;
+}
+.hero .bottom_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.hero .bottom_right p {
+  max-width: 25rem;
+}
+.hero .bottom_right a {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=Hero.module.css.map */

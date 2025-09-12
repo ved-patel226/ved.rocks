@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "TuskerGrotesk";
+  src: url("../fonts/TuskerGrotesk-3500Medium.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../fonts/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Migra";
+  src: url("../fonts/Migra-Extralight.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "NeueMontreal", sans-serif;
+  color: #f5eee6;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: black;
+  height: 500vh;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 150vh;
+  object-fit: cover;
+  z-index: -1;
+  transform: scaleX(-1);
+  filter: brightness(0.6);
+}
+
+.ttl_tusker {
+  font-size: 15rem;
+  transform-origin: center;
+  line-height: 1;
+  letter-spacing: -5px;
+  font-family: "TuskerGrotesk", sans-serif;
+  margin-bottom: -1.2rem;
+  margin-left: -0.5rem;
+}
+
+.ttl_migra {
+  font-size: 3rem;
+  transform-origin: center;
+  font-family: "Migra", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.ttl_montreal {
+  font-size: 2rem;
+  transform-origin: center;
+  font-family: "NeueMontreal", sans-serif;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 2px solid #f5eee6;
+  background: transparent;
+  color: #f5eee6;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #f5eee6;
+  color: #121212;
+}
+
+/*# sourceMappingURL=App.css.map */

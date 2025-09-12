@@ -1,0 +1,44 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+
+
+    align-items: flex-end;
+
+    padding: 15px 20px;
+
+    height: 100vh;
+    width: 100vw;
+
+
+    .bottom_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+
+        h1 {
+            max-width: 50rem;
+        }
+    }
+
+    .bottom_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+
+        p {
+            max-width: 25rem;
+        }
+
+        a {
+            opacity: 0;
+        }
+    }
+}
