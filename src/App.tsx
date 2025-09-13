@@ -1,35 +1,74 @@
 import "./css/App.css";
 
 import Hero from "./components/Hero";
-import { ScrollSmoother } from "./utils/gsap";
-import { useEffect } from "react";
+import Skills from "./components/Skills";
+
+import Background from "./components/Molecules/Background";
+import NavBar from "./components/NavBar";
+
+import { ScrollSmoother, ScrollTrigger } from "./utils/gsap";
+import { useEffect, useState } from "react";
+
+const ScrollToTop = (props: { children: any }) => {
+  useEffect(() => {
+    if (!location.hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
+  return <>{props.children}</>;
+};
 
 function App() {
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
   useEffect(() => {
-    console.log("ScrollSmoother init");
-
-    const smoother = ScrollSmoother.create({
-      smooth: 1,
-      effects: true,
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
+    document.fonts.ready.then(() => {
+      console.log("Fonts have loaded");
+      setFontsLoaded(true);
     });
-
-    return () => {
-      smoother.kill();
-    };
   }, []);
 
-  return (
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <img src="images/skyline.png" className="background"></img>
-        <Hero />
-        {Array.from({ length: 50 }).map((_) => (
-          <br />
-        ))}
+  useEffect(() => {
+    if (fontsLoaded) {
+      console.log("ScrollSmoother init");
+
+      ScrollTrigger.clearScrollMemory("manual");
+      window.scrollTo(0, 0);
+
+      const smoother = ScrollSmoother.create({
+        smooth: 0.5,
+        effects: true,
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+      });
+
+      return () => {
+        smoother.kill();
+      };
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return (
+      <div className="loading-screen">
+        <p>Loading...</p>
       </div>
-    </div>
+    );
+  }
+
+  return (
+    <ScrollToTop>
+      <div id="smooth-wrapper">
+        <Background />
+        <NavBar />
+
+        <div id="smooth-content">
+          <Hero />
+          <Skills />
+        </div>
+      </div>
+    </ScrollToTop>
   );
 }
 

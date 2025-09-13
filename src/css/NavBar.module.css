@@ -1,0 +1,38 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+.navbar .navbar-container {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .navbar-container .left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.navbar .navbar-container .left a {
+  font-weight: bold;
+  color: #f5eee6;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  text-decoration: dashed underline;
+}
+.navbar .navbar-container .left a:hover {
+  color: #daa769;
+  text-decoration: wavy underline;
+}
+.navbar .navbar-container .left a,
+.navbar .navbar-container .left p {
+  font-size: 2rem !important;
+}
+
+/*# sourceMappingURL=NavBar.module.css.map */

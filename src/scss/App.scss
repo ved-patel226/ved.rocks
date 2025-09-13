@@ -28,6 +28,7 @@
   box-sizing: border-box;
   font-family: "NeueMontreal", sans-serif;
   color: #f5eee6;
+
 }
 
 #root {
@@ -40,21 +41,25 @@ body {
   overflow-y: auto;
   background-color: black;
 
-  height: 500vh;
-
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 .background {
   position: fixed;
+  object-fit: cover;
   top: 0;
-  left: 0;
-  width: 100vw;
-  height: 150vh;
+  width: 100%;
+  height: 100vh;
   object-fit: cover;
   z-index: -1;
   transform: scaleX(-1);
   filter: brightness(0.6);
 }
+
 
 .ttl_tusker {
   font-size: 15rem;
@@ -97,4 +102,8 @@ body {
     background: #f5eee6;
     color: #121212;
   }
+}
+
+.star_icon {
+  width: fit-content !important;
 }
