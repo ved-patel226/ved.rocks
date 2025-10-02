@@ -75,7 +75,6 @@ function Hero() {
             `.${styles.bottom_right} .ttl_montreal`,
             {
               type: "words,chars",
-              charsClass: "char",
               wordsClass: "word",
             }
           );

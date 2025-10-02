@@ -2,6 +2,8 @@ import "./css/App.css";
 
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
+import SelectedWorks from "./components/SelectedWorks";
+import Footer from "./components/Footer";
 
 import Background from "./components/Molecules/Background";
 import NavBar from "./components/NavBar";
@@ -20,17 +22,27 @@ const ScrollToTop = (props: { children: any }) => {
 };
 
 function App() {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
+  const [Loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    document.fonts.ready.then(() => {
-      console.log("Fonts have loaded");
-      setFontsLoaded(true);
-    });
+    const onPageLoad = () => {
+      setLoaded(true);
+      console.log("Page and all resources fully loaded!");
+    };
+
+    if (document.readyState === "complete") {
+      onPageLoad();
+    } else {
+      window.addEventListener("load", onPageLoad);
+    }
+
+    return () => {
+      window.removeEventListener("load", onPageLoad);
+    };
   }, []);
 
   useEffect(() => {
-    if (fontsLoaded) {
+    if (Loaded) {
       console.log("ScrollSmoother init");
 
       ScrollTrigger.clearScrollMemory("manual");
@@ -47,9 +59,9 @@ function App() {
         smoother.kill();
       };
     }
-  }, [fontsLoaded]);
+  }, [Loaded]);
 
-  if (!fontsLoaded) {
+  if (!Loaded) {
     return (
       <div className="loading-screen">
         <p>Loading...</p>
@@ -66,6 +78,8 @@ function App() {
         <div id="smooth-content">
           <Hero />
           <Skills />
+          <SelectedWorks />
+          <Footer />
         </div>
       </div>
     </ScrollToTop>

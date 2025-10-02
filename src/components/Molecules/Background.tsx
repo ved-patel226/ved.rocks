@@ -8,8 +8,33 @@ export default function Background() {
     const img = imgRef.current;
     if (!img) return;
 
-    const ctx = (gsap as any).context(() => {
-      gsap.to(img, {
+    const tl = gsap.timeline();
+
+    // bottom to top so img starts at opacity: 1
+
+    tl.fromTo(
+      img,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: document.body,
+          start: "bottom-=100vh bottom",
+          end: "bottom bottom",
+          scrub: true,
+        },
+      }
+    );
+
+    tl.fromTo(
+      img,
+      {
+        opacity: 1,
+      },
+      {
         opacity: 0,
         ease: "none",
         scrollTrigger: {
@@ -17,20 +42,11 @@ export default function Background() {
           start: "top top",
           end: "bottom center",
           scrub: true,
-          // markers: true,
+          markers: true,
         },
-      });
-    }, imgRef);
-
-    return () => ctx.revert();
+      }
+    );
   }, []);
 
-  return (
-    <img
-      ref={imgRef}
-      src="images/skyline.png"
-      className="background"
-      style={{ opacity: 1 }}
-    />
-  );
+  return <img ref={imgRef} src="images/skyline.png" className="background" />;
 }

@@ -1,0 +1,38 @@
+.SelectedWorks {
+  height: 500vh;
+  position: relative;
+}
+.SelectedWorks .container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  width: 500vw;
+}
+.SelectedWorks .container .item {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.SelectedWorks .container .item img {
+  width: 80%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.SelectedWorks .container .item h2 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.SelectedWorks .container .item p {
+  margin-top: 0.5rem;
+  text-align: center;
+  max-width: 80%;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=SelectedWorks.module.css.map */

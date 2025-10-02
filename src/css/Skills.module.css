@@ -1,12 +1,33 @@
 .skills {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
-  align-items: flex-start;
   padding: 10rem 1rem;
   height: 100vh;
   width: 100vw;
+}
+.skills .intro {
+  min-width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .skills .intro {
+    min-width: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  .skills .intro {
+    min-width: 60%;
+  }
+}
+.skills .intro h2 {
+  line-height: 0.85;
 }
 .skills .skills_ttl {
   height: 100%;
@@ -27,21 +48,19 @@
     max-width: 60%;
   }
 }
-.skills .skills_ttl div {
+.skills .skills_ttl .container {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 10px;
 }
-.skills .skills_ttl div h1 {
-  font-family: "Migra", sans-serif;
-  color: #daa769;
+.skills .skills_ttl .container h1 {
   font-size: 3rem;
 }
 .skills p {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=Skills.module.css.map */

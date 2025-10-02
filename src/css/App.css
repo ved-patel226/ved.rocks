@@ -34,7 +34,7 @@
 body {
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: black;
+  background-color: #131313;
 }
 
 body::-webkit-scrollbar {
@@ -93,6 +93,11 @@ body::-webkit-scrollbar {
 
 .star_icon {
   width: fit-content !important;
+}
+
+.char {
+  font-family: "Migra", sans-serif !important;
+  color: #daa769 !important;
 }
 
 /*# sourceMappingURL=App.css.map */

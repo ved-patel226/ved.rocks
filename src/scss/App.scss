@@ -28,7 +28,6 @@
   box-sizing: border-box;
   font-family: "NeueMontreal", sans-serif;
   color: #f5eee6;
-
 }
 
 #root {
@@ -39,7 +38,7 @@
 body {
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: black;
+  background-color: #131313;
 
 }
 
@@ -106,4 +105,20 @@ body::-webkit-scrollbar {
 
 .star_icon {
   width: fit-content !important;
+  // animation: rotate 8s linear infinite;
 }
+
+.char {
+  font-family: "Migra", sans-serif !important;
+  color: #daa769 !important;
+}
+
+// @keyframes rotate {
+//   from {
+//     transform: rotate(0deg);
+//   }
+
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
