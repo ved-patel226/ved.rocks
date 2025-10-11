@@ -25,16 +25,32 @@
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   font-family: "Estrella", serif;
-  font-size: 10rem !important;
+  font-size: 3rem !important;
   vertical-align: middle;
-  line-height: 0.5;
+  line-height: 0.9;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 .navbar .navbar-container .left a:hover {
   color: #daa769;
 }
 .navbar .navbar-container .left p {
-  font-size: 2rem !important;
+  font-size: 1.6rem !important;
+}
+@media (max-width: 720px) {
+  .navbar .navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+  .navbar a {
+    font-size: 1.6rem !important;
+  }
+  .navbar p {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=NavBar.module.css.map */

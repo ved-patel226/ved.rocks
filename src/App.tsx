@@ -25,23 +25,6 @@ function App() {
   const [Loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const onPageLoad = () => {
-      setLoaded(true);
-      console.log("Page and all resources fully loaded!");
-    };
-
-    if (document.readyState === "complete") {
-      onPageLoad();
-    } else {
-      window.addEventListener("load", onPageLoad);
-    }
-
-    return () => {
-      window.removeEventListener("load", onPageLoad);
-    };
-  }, []);
-
-  useEffect(() => {
     if (Loaded) {
       console.log("ScrollSmoother init");
 

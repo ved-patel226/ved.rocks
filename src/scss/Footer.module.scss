@@ -66,6 +66,17 @@
         .links {
             flex-wrap: wrap;
             justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .top h1 {
+            font-size: 4rem;
+        }
+
+        .bottom {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
         }
     }
 }

@@ -112,6 +112,47 @@ body::-webkit-scrollbar {
   }
 }
 
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  .background {
+    /* hide large fixed background on small devices for performance */
+    display: none;
+  }
+
+  .ttl_tusker {
+    font-size: 6rem;
+    margin-left: 0;
+    letter-spacing: -2px;
+  }
+
+  .ttl_migra {
+    font-size: 1.8rem;
+  }
+
+  .ttl_montreal {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .ttl_tusker {
+    font-size: 4rem;
+  }
+
+  .ttl_migra {
+    font-size: 1.4rem;
+  }
+
+  .ttl_montreal {
+    font-size: 1rem;
+  }
+}
+
 .star_icon {
   width: fit-content !important;
   // animation: rotate 8s linear infinite;

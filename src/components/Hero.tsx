@@ -119,7 +119,7 @@ function Hero() {
 
         <a
           className="btn"
-          href="mailto:your-email@example.commailto:talk2ved11@gmail.com?subject=A%20really%20good%20idea%20I%20need%20help%20with..."
+          href="mailto:talk2ved11@gmail.com?subject=A%20really%20good%20idea%20I%20need%20help%20with..."
         >
           Contact Me
         </a>

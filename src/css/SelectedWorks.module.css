@@ -1,6 +1,7 @@
 .SelectedWorks {
   height: 500vh;
   position: relative;
+  /* Mobile: make selected works stacked and full width */
 }
 .SelectedWorks .container {
   height: 100vh;
@@ -89,6 +90,46 @@
   margin-top: 0.5rem;
   max-width: 80%;
   font-size: 1.5rem;
+}
+@media (max-width: 720px) {
+  .SelectedWorks {
+    height: auto;
+  }
+  .SelectedWorks .container {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
+  .SelectedWorks .item {
+    width: 100vw;
+    height: auto;
+    padding: 1rem;
+  }
+  .SelectedWorks .item .media {
+    height: auto;
+  }
+  .SelectedWorks .item .media img, .SelectedWorks .item .media video {
+    height: auto;
+    max-height: 55vh;
+  }
+  .SelectedWorks .item .media video {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .SelectedWorks .item .text {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .SelectedWorks .item .text h2 {
+    font-size: 1.4rem;
+  }
+  .SelectedWorks .item .text p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=SelectedWorks.module.css.map */

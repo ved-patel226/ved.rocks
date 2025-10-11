@@ -5,7 +5,6 @@
 
     position: relative;
 
-
     align-items: flex-end;
 
     padding: 15px 20px;
@@ -39,6 +38,50 @@
 
         a {
             opacity: 0;
+        }
+    }
+
+    /* Mobile: stack hero and reduce sizes */
+    @media (max-width: 720px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 1.5rem;
+        height: auto;
+
+        .bottom_left, .bottom_right {
+            width: 100%;
+            align-items: flex-start;
+        }
+
+        .bottom_left {
+            margin-top: 2rem;
+        }
+
+        .bottom_right {
+            margin-top: 1.5rem;
+        }
+
+        p {
+            max-width: 100%;
+            font-size: 1rem;
+        }
+
+        a.btn {
+            opacity: 1;
+            align-self: flex-start;
+        }
+    }
+
+    @media (max-width: 420px) {
+        padding: 1rem;
+
+        .bottom_left h2.ttl_migra {
+            font-size: 1.4rem;
+        }
+
+        .bottom_left h1.ttl_tusker {
+            font-size: 3.6rem;
         }
     }
 }
