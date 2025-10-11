@@ -22,7 +22,17 @@ const ScrollToTop = (props: { children: any }) => {
 };
 
 function App() {
-  const [Loaded, setLoaded] = useState(true);
+  const [Loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const handleLoad = () => setLoaded(true);
+    if (document.readyState === "complete") {
+      setLoaded(true);
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
 
   useEffect(() => {
     if (Loaded) {
