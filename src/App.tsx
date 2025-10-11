@@ -22,7 +22,7 @@ const ScrollToTop = (props: { children: any }) => {
 };
 
 function App() {
-  const [Loaded, setLoaded] = useState(false);
+  const [Loaded, setLoaded] = useState(true);
 
   useEffect(() => {
     if (Loaded) {

@@ -20,9 +20,7 @@
             min-width: 70%;
         }
 
-        @media (min-width: 1024px) {
-            min-width: 60%;
-        }
+
 
 
         display: flex;
@@ -33,6 +31,10 @@
 
         h2 {
             line-height: 0.85;
+        }
+
+        @media (min-width: 1024px) {
+            min-width: 60%;
         }
 
     }

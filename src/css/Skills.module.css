@@ -21,13 +21,13 @@
     min-width: 70%;
   }
 }
+.skills .intro h2 {
+  line-height: 0.85;
+}
 @media (min-width: 1024px) {
   .skills .intro {
     min-width: 60%;
   }
-}
-.skills .intro h2 {
-  line-height: 0.85;
 }
 .skills .skills_ttl {
   height: 100%;

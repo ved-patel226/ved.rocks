@@ -25,9 +25,9 @@
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   font-family: "Estrella", serif;
-  font-size: 3rem !important;
+  font-size: 10rem !important;
   vertical-align: middle;
-  line-height: 0.9;
+  line-height: 0.5;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 .navbar .navbar-container .left a:hover {
