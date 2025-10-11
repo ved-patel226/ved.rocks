@@ -21,6 +21,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Estrella';
+  src: url('../fonts/Estrella-Early.otf') format('opentype');
+
+  font-style: normal;
+  font-display: swap;
+}
+
 
 * {
   margin: 0;
@@ -86,6 +94,7 @@ body::-webkit-scrollbar {
 
   font-family: "NeueMontreal", sans-serif;
 }
+
 
 .btn {
   padding: 10px 20px;

@@ -24,13 +24,15 @@
   color: #f5eee6;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  text-decoration: dashed underline;
+  font-family: "Estrella", serif;
+  font-size: 10rem !important;
+  vertical-align: middle;
+  line-height: 0.5;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 .navbar .navbar-container .left a:hover {
   color: #daa769;
-  text-decoration: wavy underline;
 }
-.navbar .navbar-container .left a,
 .navbar .navbar-container .left p {
   font-size: 2rem !important;
 }

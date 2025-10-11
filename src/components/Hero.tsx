@@ -1,10 +1,7 @@
 import styles from "../css/Hero.module.css";
 import gsap, { useGSAP, SplitText } from "../utils/gsap";
-import { useEffect, useState } from "react";
 
 function Hero() {
-  const [doneAnimation, setDoneAnimation] = useState(false);
-
   const calculateAge = () => {
     const birthDate = new Date(2011, 1, 26);
     const today = new Date();
@@ -25,9 +22,7 @@ function Hero() {
   const age = calculateAge();
 
   useGSAP(() => {
-    const tl = gsap.timeline({
-      onComplete: () => setDoneAnimation(true),
-    });
+    const tl = gsap.timeline({});
     tl.to(
       `.${styles.bottom_left} .ttl_migra`,
       {
@@ -109,19 +104,6 @@ function Hero() {
     );
   }, []);
 
-  useEffect(() => {
-    // if (doneAnimation) {
-    //   document.body.style.overflow = "auto";
-    // } else {
-    //   document.body.style.overflow = "hidden";
-    //   gsap.to(window, {
-    //     scrollTo: 0,
-    //     duration: 1,
-    //     ease: "power3.out",
-    //   });
-    // }
-  }, [doneAnimation]);
-
   return (
     <div className={styles.hero}>
       <div className={styles.bottom_left}>
@@ -131,8 +113,8 @@ function Hero() {
 
       <div className={styles.bottom_right}>
         <p className="ttl_montreal">
-          I'm from Jersey attending Edison Academy Magnet School. Talk to me
-          about burritos, traveling, and work!
+          from Jersey attending Edison Academy Magnet School. Talk to me about
+          burritos, traveling, and work!
         </p>
 
         <a

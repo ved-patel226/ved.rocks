@@ -42,7 +42,7 @@ export default function Background() {
           start: "top top",
           end: "bottom center",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
       }
     );
