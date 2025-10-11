@@ -40,7 +40,8 @@
     padding: 1.5rem;
     height: auto;
   }
-  .hero .bottom_left, .hero .bottom_right {
+  .hero .bottom_left,
+  .hero .bottom_right {
     width: 100%;
     align-items: flex-start;
   }

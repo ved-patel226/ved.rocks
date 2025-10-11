@@ -108,7 +108,8 @@
   .SelectedWorks .item .media {
     height: auto;
   }
-  .SelectedWorks .item .media img, .SelectedWorks .item .media video {
+  .SelectedWorks .item .media img,
+  .SelectedWorks .item .media video {
     height: auto;
     max-height: 55vh;
   }
