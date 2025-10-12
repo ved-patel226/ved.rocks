@@ -55,7 +55,7 @@ function SelectedWorks() {
       });
 
       gsap.to(containerRef.current, {
-        xPercent: -(100 / items.length) * (items.length - 1),
+        xPercent: -86.667,
         ease: "none",
         scrollTrigger: {
           trigger: sectionRef.current,

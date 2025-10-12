@@ -44,14 +44,18 @@
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: auto;
   background-color: #131313;
-
 }
 
-body::-webkit-scrollbar {
-  display: none;
+
+::-webkit-scrollbar {
+  display: none; // Safari and Chrome
+}
+
+body,
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 
@@ -110,15 +114,15 @@ body::-webkit-scrollbar {
     background: #f5eee6;
     color: #121212;
   }
+
+  @media screen and (max-width: 800px) {
+    padding: 8px 14px;
+    font-size: 1.75rem !important;
+  }
 }
 
 /* Responsive tweaks */
 @media (max-width: 720px) {
-  .background {
-    /* hide large fixed background on small devices for performance */
-    display: none;
-  }
-
   .ttl_tusker {
     font-size: 6rem;
     margin-left: 0;

@@ -62,5 +62,10 @@
 .skills p {
   font-size: 1.5rem;
 }
+@media screen and (max-width: 800px) {
+  .skills .intro {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=Skills.module.css.map */

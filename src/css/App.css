@@ -38,13 +38,17 @@
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: auto;
   background-color: #131313;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .background {
@@ -96,13 +100,15 @@ body::-webkit-scrollbar {
   background: #f5eee6;
   color: #121212;
 }
+@media screen and (max-width: 800px) {
+  .btn {
+    padding: 8px 14px;
+    font-size: 1.75rem !important;
+  }
+}
 
 /* Responsive tweaks */
 @media (max-width: 720px) {
-  .background {
-    /* hide large fixed background on small devices for performance */
-    display: none;
-  }
   .ttl_tusker {
     font-size: 6rem;
     margin-left: 0;
