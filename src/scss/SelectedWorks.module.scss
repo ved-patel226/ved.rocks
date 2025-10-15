@@ -10,6 +10,8 @@
         width: 750vw;
 
         .item {
+            position: relative;
+            /* ensure absolute separator is positioned relative to each item */
             width: 100vw;
             height: 100vh;
             display: flex;
@@ -108,6 +110,29 @@
                 max-width: 80%;
                 font-size: 1.5rem;
             }
+
         }
+
+        .seperator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                color: #daa769 !important;
+                filter:
+                    brightness(0) saturate(100%) invert(96%) sepia(27%) saturate(5749%) hue-rotate(307deg) brightness(92%) contrast(85%);
+                display: block;
+                margin: 0 auto;
+
+                width: 150px;
+                height: 150px;
+            }
+
+            @media screen and (max-width:800px) {
+                display: none;
+            }
+        }
+
     }
 }

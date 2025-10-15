@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Background from "./components/Molecules/Background";
 import NavBar from "./components/NavBar";
 
-// import { ScrollSmoother, ScrollTrigger } from "./utils/gsap";
+import { ScrollSmoother, ScrollTrigger } from "./utils/gsap";
 import { useEffect, useState } from "react";
 
 const ScrollToTop = (props: { children: any }) => {
@@ -34,26 +34,26 @@ function App() {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (Loaded) {
-  //     console.log("ScrollSmoother init");
+  useEffect(() => {
+    if (Loaded) {
+      console.log("ScrollSmoother init");
 
-  //     ScrollTrigger.clearScrollMemory("manual");
-  //     window.scrollTo(0, 0);
+      ScrollTrigger.clearScrollMemory("manual");
+      window.scrollTo(0, 0);
 
-  //     const smoother = ScrollSmoother.create({
-  //       smooth: 0.5,
-  //       effects: true,
-  //       wrapper: "#smooth-wrapper",
-  //       content: "#smooth-content",
-  //       smoothTouch: 0.1,
-  //     });
+      const smoother = ScrollSmoother.create({
+        smooth: 0.5,
+        effects: true,
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smoothTouch: 0.1,
+      });
 
-  //     return () => {
-  //       smoother.kill();
-  //     };
-  //   }
-  // }, [Loaded]);
+      return () => {
+        smoother.kill();
+      };
+    }
+  }, [Loaded]);
 
   if (!Loaded) {
     return (

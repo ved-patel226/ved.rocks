@@ -121,6 +121,7 @@ html {
   }
 }
 
+
 /* Responsive tweaks */
 @media (max-width: 720px) {
   .ttl_tusker {
@@ -159,20 +160,9 @@ html {
 
 .star_icon {
   width: fit-content !important;
-  // animation: rotate 8s linear infinite;
 }
 
 .char {
   font-family: "Migra", sans-serif !important;
   color: #daa769 !important;
 }
-
-// @keyframes rotate {
-//   from {
-//     transform: rotate(0deg);
-//   }
-
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }

@@ -1,10 +1,8 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 import styles from "../css/SelectedWorks.module.css";
 import { UnmuteIcon, MuteIcon } from "@primer/octicons-react";
-gsap.registerPlugin(ScrollTrigger);
-
+import { Fragment } from "react";
+import gsap, { ScrollTrigger, useGSAP } from "../utils/gsap";
 function SelectedWorks() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -44,7 +42,7 @@ function SelectedWorks() {
     },
   ];
 
-  useEffect(() => {
+  useGSAP(() => {
     if (containerRef.current && sectionRef.current) {
       ScrollTrigger.create({
         trigger: sectionRef.current,
@@ -65,11 +63,29 @@ function SelectedWorks() {
           invalidateOnRefresh: true,
         },
       });
-    }
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+      const seps =
+        containerRef.current.querySelectorAll<HTMLDivElement>("[data-sep]");
+
+      if (seps.length) {
+        gsap.to(seps, {
+          rotation: 360,
+          yPercent: -10,
+          ease: "none",
+          stagger: 0.08,
+          height: 250,
+          width: 250,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+            invalidateOnRefresh: true,
+            markers: true,
+          },
+        });
+      }
+    }
   }, []);
 
   const handleMouseEnter = async (
@@ -124,63 +140,74 @@ function SelectedWorks() {
     <div ref={sectionRef} className={styles.SelectedWorks}>
       <div ref={containerRef} className={styles.container}>
         {items.map((item, idx) => (
-          <div className={styles.item} key={idx}>
-            {item.video ? (
-              <div
-                className={styles.media}
-                onMouseEnter={(e) => handleMouseEnter(e, `video-${idx}`)}
-                onMouseLeave={(e) => handleMouseLeave(e, `video-${idx}`)}
-              >
-                <img src={item.img} alt={item.title} />
-
-                <video
-                  src={item.video}
-                  loop
-                  playsInline
-                  id={`video-${idx}`}
-                  preload="metadata"
-                  style={{ opacity: 0 }}
-                  muted
-                />
+          <Fragment key={`separator-${idx}`}>
+            <div className={styles.item} key={idx}>
+              {item.video ? (
                 <div
-                  className={styles.iconsContainer}
-                  onClick={(e) => handleToggleAudio(e, `video-${idx}`)}
+                  className={styles.media}
+                  onMouseEnter={(e) => handleMouseEnter(e, `video-${idx}`)}
+                  onMouseLeave={(e) => handleMouseLeave(e, `video-${idx}`)}
                 >
-                  <UnmuteIcon
-                    size={64}
-                    className={styles.Icon}
-                    data-role="unmute"
-                    aria-label="Unmute video"
+                  <img src={item.img} alt={item.title} />
+
+                  <video
+                    src={item.video}
+                    loop
+                    playsInline
+                    id={`video-${idx}`}
+                    preload="metadata"
+                    style={{ opacity: 0 }}
+                    muted
                   />
-                  <MuteIcon
-                    size={64}
-                    className={styles.Icon}
-                    data-role="mute"
-                    aria-label="Mute video"
-                  />
+                  <div
+                    className={styles.iconsContainer}
+                    onClick={(e) => handleToggleAudio(e, `video-${idx}`)}
+                  >
+                    <UnmuteIcon
+                      size={64}
+                      className={styles.Icon}
+                      data-role="unmute"
+                      aria-label="Unmute video"
+                    />
+                    <MuteIcon
+                      size={64}
+                      className={styles.Icon}
+                      data-role="mute"
+                      aria-label="Mute video"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div className={styles.media}>
+                  <img src={item.img} alt={item.title} />
+                </div>
+              )}
+
+              <div className={styles.text}>
+                <h2>{item.title}</h2>
+                <div className={styles.tech}>
+                  {item.tech &&
+                    item.tech
+                      .split(",")
+                      .map((tech, i) => <p key={i}>{tech.trim()}</p>)}
                 </div>
               </div>
-            ) : (
-              <div className={styles.media}>
-                <img src={item.img} alt={item.title} />
-              </div>
-            )}
 
-            <div className={styles.text}>
-              <h2>{item.title}</h2>
-              <div className={styles.tech}>
-                {item.tech &&
-                  item.tech
-                    .split(",")
-                    .map((tech, i) => <p key={i}>{tech.trim()}</p>)}
-              </div>
+              <p>
+                <span style={{ display: "inline-block", width: "2em" }} />
+                {item.desc}
+              </p>
             </div>
 
-            <p>
-              <span style={{ display: "inline-block", width: "2em" }} />
-              {item.desc}
-            </p>
-          </div>
+            <div className={styles.seperator}>
+              <img
+                data-sep
+                className="floaters"
+                src={`svgs/floater_${idx % 2}.svg`}
+                alt="Separator"
+              />
+            </div>
+          </Fragment>
         ))}
       </div>
     </div>
