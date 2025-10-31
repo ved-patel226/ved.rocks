@@ -57,10 +57,14 @@
   gap: 10px;
 }
 .skills .skills_ttl .container h1 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
-.skills p {
-  font-size: 1.5rem;
+.skills .skills_ttl p {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.skills .skills_ttl p b .word {
+  color: #daa769 !important;
 }
 @media screen and (max-width: 800px) {
   .skills .intro {

@@ -10,13 +10,28 @@
 }
 .hero .bottom_left {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2rem;
 }
-.hero .bottom_left h1 {
-  max-width: 50rem;
+.hero .bottom_left .fullstack_container {
+  width: fit-content;
+}
+.hero .bottom_left .fullstack_container h1 {
+  position: relative;
+  width: min-content;
+}
+.hero .bottom_left .ai_container {
+  display: flex;
+  align-items: flex-end;
+}
+.hero .bottom_left .ai_container .ai {
+  font-size: 4rem;
+  padding: 2rem 1rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid #f5eee6;
+  writing-mode: vertical-rl;
 }
 .hero .bottom_right {
   display: flex;

@@ -1,5 +1,6 @@
 import styles from "../css/Hero.module.css";
 import gsap, { useGSAP, SplitText } from "../utils/gsap";
+import { useRef } from "react";
 
 function Hero() {
   const calculateAge = () => {
@@ -21,8 +22,35 @@ function Hero() {
 
   const age = calculateAge();
 
+  const aiRef = useRef<HTMLHeadingElement>(null);
+  const fullstackRef = useRef<HTMLHeadingElement>(null);
+
   useGSAP(() => {
     const tl = gsap.timeline({});
+    tl.fromTo(
+      aiRef.current,
+      {
+        opacity: 0,
+        backdropFilter: "none",
+      },
+      {
+        backdropFilter: "blur(8px)",
+        color: "#f5eee6",
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrambleText: {
+          text: "+ AI ENGINEER",
+          tweenLength: true,
+          chars: "✺{}[]()",
+          revealDelay: 0.25,
+          speed: 0.1,
+        },
+        delay: 2,
+      },
+      0
+    );
+
     tl.to(
       `.${styles.bottom_left} .ttl_migra`,
       {
@@ -102,13 +130,21 @@ function Hero() {
       },
       2.5
     );
-  }, []);
+  }, [age]);
 
   return (
     <div className={styles.hero}>
       <div className={styles.bottom_left}>
-        <h2 className="ttl_migra">{age} year old</h2>
-        <h1 className="ttl_tusker">FULLSTACK</h1>
+        <div className={styles.fullstack_container}>
+          <h2 className="ttl_migra"></h2>
+          <h1 className="ttl_tusker" ref={fullstackRef}></h1>
+        </div>
+
+        <div className={styles.ai_container}>
+          <h1 className={styles.ai} ref={aiRef}>
+            + AI ENGINEER
+          </h1>
+        </div>
       </div>
 
       <div className={styles.bottom_right}>

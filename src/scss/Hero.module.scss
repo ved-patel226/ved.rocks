@@ -15,15 +15,42 @@
 
     .bottom_left {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 10px;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
 
-        h1 {
-            max-width: 50rem;
+        gap: 2rem;
+
+        .fullstack_container {
+            width: fit-content;
+
+            h1 {
+                position: relative;
+                width: min-content;
+            }
+        }
+
+        .ai_container {
+            display: flex;
+            align-items: flex-end;
+
+            .ai {
+                font-size: 4rem;
+                padding: 2rem 1rem;
+                backdrop-filter: blur(8px);
+
+                border: 1px solid #f5eee6;
+
+
+
+                writing-mode: vertical-rl;
+            }
         }
     }
+
+
+
+
 
     .bottom_right {
         display: flex;
