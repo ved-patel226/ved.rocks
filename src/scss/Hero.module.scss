@@ -42,9 +42,9 @@
                 border: 1px solid #f5eee6;
 
 
-
                 writing-mode: vertical-rl;
             }
+
         }
     }
 
@@ -82,11 +82,14 @@
 
         .bottom_left {
             margin-top: 2rem;
+            align-items: flex-end;
 
-            h1 {
-                font-size: 8rem !important;
-                max-width: 100%;
+
+
+            .fullstack_container {
+                display: none;
             }
+
 
             h2 {
                 font-size: 3.5rem !important;
@@ -109,4 +112,12 @@
         }
     }
 
+
+    @media (max-width: 1350px) {
+        .bottom_left {
+            .ai_container {
+                display: none;
+            }
+        }
+    }
 }

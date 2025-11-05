@@ -117,10 +117,11 @@ export default function Skills() {
           <h1 ref={ttlRef}>my skills</h1>
         </div>
         <p ref={paragraphRef}>
-          I enjoy coding, creating, and design. I use{" "}
-          <b>TypeScript, React, Express, GSAP, and SASS</b> to build for the
-          web. I also work with AI and Machine Learning, and use tools like{" "}
-          <b>Python, Rust, PyTorch, Numpy, and TensorFlow</b>
+          I enjoy coding, creating, and design. I use TypeScript, React,
+          Express, GSAP, and SASS to build for the web. I also work with AI and
+          Machine Learning, using tools like Python, Rust, PyTorch, Numpy, and
+          TensorFlow. Additionally, I have experience with CAD and use Fusion
+          360 for 3D modeling and design.
         </p>
       </div>
     </div>

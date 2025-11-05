@@ -10,8 +10,6 @@ export default function Background() {
 
     const tl = gsap.timeline();
 
-    // bottom to top so img starts at opacity: 1
-
     tl.fromTo(
       img,
       {

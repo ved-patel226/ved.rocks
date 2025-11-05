@@ -23,10 +23,10 @@ function SelectedWorks() {
       video: "/videos/trackmania.mp4",
     },
     {
-      img: "/images/AlbumMagic.png",
-      title: "AlbumMagic",
+      img: "/images/bowbot.png",
+      title: "BowBot",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-      tech: "React, SCSS, TypeScript, Rust, Axum",
+      tech: "Fusion 360, MicroPython, Raspberry Pi, Inverse kinematics",
     },
     {
       img: "/images/AlbumMagic.png",

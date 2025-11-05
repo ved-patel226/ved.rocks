@@ -6,13 +6,14 @@ import { SplitText } from "gsap/SplitText";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-gsap.registerPlugin(
-  useGSAP,
-  ScrollTrigger,
-  SplitText,
-  ScrambleTextPlugin,
-  ScrollSmoother
-);
+if (typeof window !== "undefined" && (gsap as any).registerPlugin) {
+  gsap.registerPlugin(
+    ScrollTrigger,
+    SplitText,
+    ScrambleTextPlugin,
+    ScrollSmoother
+  );
+}
 
 export default gsap;
 export {

@@ -60,10 +60,10 @@
   }
   .hero .bottom_left {
     margin-top: 2rem;
+    align-items: flex-end;
   }
-  .hero .bottom_left h1 {
-    font-size: 8rem !important;
-    max-width: 100%;
+  .hero .bottom_left .fullstack_container {
+    display: none;
   }
   .hero .bottom_left h2 {
     font-size: 3.5rem !important;
@@ -79,6 +79,11 @@
   .hero a.btn {
     opacity: 1;
     align-self: flex-start;
+  }
+}
+@media (max-width: 1350px) {
+  .hero .bottom_left .ai_container {
+    display: none;
   }
 }
 
