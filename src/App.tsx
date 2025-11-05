@@ -25,12 +25,24 @@ function App() {
   const [Loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const handleLoad = () => setLoaded(true);
-    if (document.readyState === "complete") {
+    if (
+      document.readyState === "complete" &&
+      document.fonts.status === "loaded"
+    ) {
       setLoaded(true);
     } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
+      const checkFonts = () => {
+        if (document.fonts.status === "loaded") {
+          setLoaded(true);
+        }
+      };
+
+      window.addEventListener("load", checkFonts);
+      document.fonts.ready.then(checkFonts);
+
+      return () => {
+        window.removeEventListener("load", checkFonts);
+      };
     }
   }, []);
 

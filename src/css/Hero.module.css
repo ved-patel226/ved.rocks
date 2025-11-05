@@ -52,6 +52,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     padding: 1.5rem;
+    height: 90vh;
   }
   .hero .bottom_left,
   .hero .bottom_right {
