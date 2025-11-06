@@ -9,7 +9,7 @@ function SelectedWorks() {
 
   const items = [
     {
-      img: "/images/landing.png",
+      img: "/images/landing.jpg",
       title: "Autonomous First Stage Booster Landing",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
       video: "/videos/landing.mp4",
@@ -23,19 +23,20 @@ function SelectedWorks() {
       video: "/videos/trackmania.mp4",
     },
     {
-      img: "/images/bowbot.png",
+      img: "/images/bowbot.jpg",
       title: "BowBot",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
       tech: "Fusion 360, MicroPython, Raspberry Pi, Inverse kinematics",
     },
     {
-      img: "/images/AlbumMagic.png",
-      title: "AlbumMagic",
+      img: "/images/LIC.jpg",
+      title:
+        "Impact of Learned Image Compression on Downstream Model Performance (LIC)",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-      tech: "React, SCSS, TypeScript, Rust, Axum",
+      tech: "Python, Pytorch, Expiremental Research",
     },
     {
-      img: "/images/AlbumMagic.png",
+      img: "/images/AlbumMagic.jpg",
       title: "AlbumMagic",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
       tech: "React, SCSS, TypeScript, Rust, Axum",

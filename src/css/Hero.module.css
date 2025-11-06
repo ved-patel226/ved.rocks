@@ -46,12 +46,19 @@
 .hero .bottom_right a {
   opacity: 0;
 }
-@media (max-width: 720px) {
+@media (max-width: 1200px) {
   .hero {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
     padding: 1.5rem;
+  }
+  .hero .bottom_left .fullstack_container {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .hero {
     height: 90vh;
   }
   .hero .bottom_left,
@@ -62,9 +69,6 @@
   .hero .bottom_left {
     margin-top: 2rem;
     align-items: flex-end;
-  }
-  .hero .bottom_left .fullstack_container {
-    display: none;
   }
   .hero .bottom_left h2 {
     font-size: 3.5rem !important;

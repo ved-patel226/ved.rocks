@@ -46,5 +46,5 @@ export default function Background() {
     );
   }, []);
 
-  return <img ref={imgRef} src="images/skyline.png" className="background" />;
+  return <img ref={imgRef} src="images/skyline.jpg" className="background" />;
 }

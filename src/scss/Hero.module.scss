@@ -68,11 +68,20 @@
         }
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 1200px) {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
         padding: 1.5rem;
+
+        .bottom_left {
+            .fullstack_container {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 720px) {
         height: 90vh;
 
         .bottom_left,
@@ -84,12 +93,6 @@
         .bottom_left {
             margin-top: 2rem;
             align-items: flex-end;
-
-
-
-            .fullstack_container {
-                display: none;
-            }
 
 
             h2 {

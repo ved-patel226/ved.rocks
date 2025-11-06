@@ -136,7 +136,7 @@ function Hero() {
     <div className={styles.hero}>
       <div className={styles.bottom_left}>
         <div className={styles.fullstack_container}>
-          <h2 className="ttl_migra"></h2>
+          <h2 className="ttl_migra" style={{ fontSize: "5rem" }}></h2>
           <h1 className="ttl_tusker" ref={fullstackRef}></h1>
         </div>
 
