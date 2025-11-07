@@ -117,11 +117,20 @@ export default function Skills() {
           <h1 ref={ttlRef}>my skills</h1>
         </div>
         <p ref={paragraphRef}>
-          I enjoy coding, creating, and design. I use TypeScript, React,
-          Express, GSAP, and SASS to build for the web. I also work with AI and
-          Machine Learning, using tools like Python, Rust, PyTorch, Numpy, and
-          TensorFlow. Additionally, I have experience with CAD and use Fusion
-          360 for 3D modeling and design.
+          I enjoy coding, creating, and designing. I build for the web using{" "}
+          <img src="/svgs/tech/TypeScript.svg" alt="TypeScript" />,{" "}
+          <img src="/svgs/tech/React.svg" alt="React" />,{" "}
+          <img src="/svgs/tech/gsap-white.svg" alt="GSAP" /> and{" "}
+          <img src="/svgs/tech/Sass.svg" alt="Sass" />. My interests also extend
+          to AI and machine learning, where I work with{" "}
+          <img src="/svgs/tech/Python.svg" alt="Python" />,{" "}
+          <img src="/svgs/tech/Rust.svg" alt="Rust" />,{" "}
+          <img src="/svgs/tech/PyTorch.svg" alt="PyTorch" />,{" "}
+          <img src="/svgs/tech/NumPy.svg" alt="NumPy" /> and{" "}
+          <img src="/svgs/tech/TensorFlow.svg" alt="TensorFlow" />. I also have
+          experience with CAD and use{" "}
+          <img src="/svgs/tech/Fusion.svg" alt="Fusion" /> for 3D modeling and
+          design.{" "}
         </p>
       </div>
     </div>

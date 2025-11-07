@@ -77,6 +77,13 @@
             font-size: 2rem;
             line-height: 1.5;
 
+            img {
+                height: 2.2rem;
+                width: auto;
+                margin: 0 0.3em;
+                vertical-align: sub;
+            }
+
             b {
                 .word {
                     color: #daa769 !important;

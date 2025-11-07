@@ -63,6 +63,12 @@
   font-size: 2rem;
   line-height: 1.5;
 }
+.skills .skills_ttl p img {
+  height: 2.2rem;
+  width: auto;
+  margin: 0 0.3em;
+  vertical-align: sub;
+}
 .skills .skills_ttl p b .word {
   color: #daa769 !important;
 }
