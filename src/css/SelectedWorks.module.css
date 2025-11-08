@@ -61,6 +61,9 @@
   z-index: 3;
   opacity: 0.7;
 }
+.SelectedWorks .container .item .media .iconsContainer .muteIcon {
+  display: none;
+}
 .SelectedWorks .container .item .text {
   width: 80%;
   display: flex;
@@ -78,14 +81,15 @@
   justify-content: center;
   gap: 0.5rem;
 }
-.SelectedWorks .container .item .text .tech p {
-  text-align: center;
-  font-size: 1.5rem;
-  background-color: #daa769;
-  color: #131313;
-  padding: 0.2rem 0.5rem;
+.SelectedWorks .container .item .text .tech img {
+  width: 3rem;
+  height: 3rem;
+  fill: #daa769;
+  background: #131313;
   border-radius: 8px;
-  max-width: 100%;
+  padding: 0.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  vertical-align: sub;
 }
 @media screen and (max-width: 800px) {
   .SelectedWorks .container .item .text .tech {

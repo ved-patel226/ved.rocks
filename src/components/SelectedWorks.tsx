@@ -13,33 +13,42 @@ function SelectedWorks() {
       title: "Autonomous First Stage Booster Landing",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
       video: "/videos/landing.mp4",
-      tech: "Python",
+      tech: ["/svgs/tech/Python.svg"],
     },
     {
       img: "/images/trackmania.jpg",
       title: "TrackMania AI",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-      tech: "Python, PyTorch, AI",
+      tech: ["/svgs/tech/Python.svg", "/svgs/tech/PyTorch.svg"],
       video: "/videos/trackmania.mp4",
-    },
-    {
-      img: "/images/bowbot.jpg",
-      title: "BowBot",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-      tech: "Fusion 360, MicroPython, Raspberry Pi, Inverse kinematics",
     },
     {
       img: "/images/LIC.jpg",
       title:
         "Impact of Learned Image Compression on Downstream Model Performance (LIC)",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-      tech: "Python, Pytorch, Expiremental Research",
+      tech: ["/svgs/tech/Python.svg", "/svgs/tech/PyTorch.svg"],
+    },
+    {
+      img: "/images/bowbot.jpg",
+      title: "BowBot",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      tech: [
+        "/svgs/tech/Fusion.svg",
+        "/svgs/tech/Python.svg",
+        "/svgs/tech/RaspPi.svg",
+      ],
     },
     {
       img: "/images/AlbumMagic.jpg",
       title: "AlbumMagic",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-      tech: "React, SCSS, TypeScript, Rust, Axum",
+      tech: [
+        "/svgs/tech/React.svg",
+        "/svgs/tech/Sass.svg",
+        "/svgs/tech/TypeScript.svg",
+        "/svgs/tech/Rust.svg",
+      ],
     },
   ];
 
@@ -166,13 +175,13 @@ function SelectedWorks() {
                   >
                     <UnmuteIcon
                       size={64}
-                      className={styles.Icon}
+                      className={`${styles.Icon} ${styles.unmuteIcon}`}
                       data-role="unmute"
                       aria-label="Unmute video"
                     />
                     <MuteIcon
                       size={64}
-                      className={styles.Icon}
+                      className={`${styles.Icon} ${styles.muteIcon}`}
                       data-role="mute"
                       aria-label="Mute video"
                     />
@@ -188,9 +197,9 @@ function SelectedWorks() {
                 <h2>{item.title}</h2>
                 <div className={styles.tech}>
                   {item.tech &&
-                    item.tech
-                      .split(",")
-                      .map((tech, i) => <p key={i}>{tech.trim()}</p>)}
+                    item.tech.map((techImg, i) => (
+                      <img key={i} src={techImg} alt={`Technology ${i + 1}`} />
+                    ))}
                 </div>
               </div>
 
