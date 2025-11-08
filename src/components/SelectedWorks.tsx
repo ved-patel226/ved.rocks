@@ -11,14 +11,14 @@ function SelectedWorks() {
     {
       img: "/images/landing.jpg",
       title: "Autonomous First Stage Booster Landing",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      desc: "Developed an active control system for the autonomous orbit-to-ground landing of a reusable rocket booster. Used trajectory simulations to achieve ~100 m accuracy. Inspired by SpaceX.",
       video: "/videos/landing.mp4",
       tech: ["/svgs/tech/Python.svg"],
     },
     {
       img: "/images/trackmania.jpg",
       title: "TrackMania AI",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      desc: "Built a QR-DQN (Quantile Regression Deep Q-Network) agent to play TrackMania. The AI learns optimal driving strategies through trial and error, surpassing the 2019 and 2020 world record on this map.",
       tech: ["/svgs/tech/Python.svg", "/svgs/tech/PyTorch.svg"],
       video: "/videos/trackmania.mp4",
     },
@@ -26,13 +26,13 @@ function SelectedWorks() {
       img: "/images/LIC.jpg",
       title:
         "Impact of Learned Image Compression on Downstream Model Performance (LIC)",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      desc: "Researched how AI-based image compression affects the performance of downstream vision models trained on compressed data. Focused on optimizing compression networks while preserving key visual features for object detection and classification tasks.",
       tech: ["/svgs/tech/Python.svg", "/svgs/tech/PyTorch.svg"],
     },
     {
       img: "/images/bowbot.jpg",
       title: "BowBot",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      desc: "Designed and built an autonomous robotic arm capable of playing the violin. Integrated computer vision for string and bow position detection, and developed a custom control system for smooth, precise motion using a Raspberry Pi.",
       tech: [
         "/svgs/tech/Fusion.svg",
         "/svgs/tech/Python.svg",
@@ -42,7 +42,7 @@ function SelectedWorks() {
     {
       img: "/images/AlbumMagic.jpg",
       title: "AlbumMagic",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac velit sed odio elementum maximus quis id sem. Mauris tincidunt odio ac posuere sollicitudin. Suspendisse leo est, tincidunt cursus pulvinar ac, fermentum et orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      desc: "Developed a web application that visually displays the currently playing Spotify song in a clean interface. Integrated the Spotify Web API for real-time updates and used TypeScript and React for the frontend with a lightweight Rust backend.",
       tech: [
         "/svgs/tech/React.svg",
         "/svgs/tech/Sass.svg",
